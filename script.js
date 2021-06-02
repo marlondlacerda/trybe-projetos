@@ -63,3 +63,11 @@ function pintarPixel(tinta) {
     });
   }
 }
+
+function apagar(tinta) {
+const pixels = document.querySelectorAll('.pixel');
+
+  for (let index = 0; index < pixels.length; index += 1) {
+      pixels[index].style.backgroundColor = tinta;
+    }
+  }
