@@ -1,10 +1,12 @@
 window.onload = () => {
   const cores = ['black', 'pink', 'red', 'olive'];
   const cPaleta = document.querySelector('#color-palette');
+  const tinta = 'black';
 
   criadorDePaletas(cPaleta, cores);
   criadordeQuadro();
-  seletorDeCor();
+  seletorDeCor(cores);
+  pintarPixel(tinta);
 };
 
 // Função com objetivo de criar Listas ordenadas com os Baldes de Tintas para o usuário Selecionar.
@@ -34,7 +36,7 @@ function criadordeQuadro() {
 }
 
 //   FUNÇÃO PARA SELECIONAR A COR DO BALDE
-function seletorDeCor() {
+function seletorDeCor(cores) {
   const btnColor = document.querySelectorAll('.color');
   const corSelect = 'color selected';
 
@@ -45,7 +47,19 @@ function seletorDeCor() {
       btnColor[2].className = 'color';
       btnColor[3].className = 'color';
       btnColor[index].className = corSelect;
+      const newTinta = cores[index];
+      pintarPixel(newTinta);
     });
   }
 }
 // ============================ // ================================================= //
+
+function pintarPixel(tinta) {
+  const pixels = document.querySelectorAll('.pixel');
+
+  for (let index = 0; index < pixels.length; index += 1) {
+    pixels[index].addEventListener('click', () => {
+      pixels[index].style.backgroundColor = tinta;
+    });
+  }
+}
