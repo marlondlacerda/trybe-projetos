@@ -11,9 +11,8 @@ h1 {
 }
 
 #pixel-board {
-  width: 212px;
-  height: 212px;
-  box-sizing: border-box;
+  width: 210px;
+  height: 210px;
   text-align: center;
   border: solid 1px black;
 }
@@ -25,4 +24,3 @@ h1 {
   display: inline-block;
   background-color: white;
 }
-
