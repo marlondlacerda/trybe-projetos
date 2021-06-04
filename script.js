@@ -1,13 +1,23 @@
-window.onload = () => {
-  const cores = ['black', 'pink', 'red', 'olive'];
-  const cPaleta = document.querySelector('#color-palette');
-  const tinta = 'black';
+// Define a cor preta como selecionada ao iniciar o site
+function blackSelected() {
+  const black = document.querySelector('.color');
+  black.classList.add('selected');
+}
+// ============================ // ================================================= //
 
-  criadorDePaletas(cPaleta, cores);
-  criadordeQuadro();
-  seletorDeCor(cores);
-  pintarPixel(tinta);
-};
+// Função para escolher a cor do balde e pintar os pixels
+function pincel(click) {
+  const colorSelected = document.querySelector('.selected');
+  const clack = click;
+  if (clack.target.classList.contains('color') && clack.target !== colorSelected) {
+    colorSelected.classList.remove('selected');
+    clack.target.classList.add('selected');
+  } else if (clack.target.classList.contains('pixel')) {
+    const corAtual = colorSelected.style.backgroundColor;
+    clack.target.style.backgroundColor = corAtual;
+  }
+}
+// ============================ // ================================================= //
 
 // Função com objetivo de criar Listas ordenadas com os Baldes de Tintas para o usuário Selecionar.
 function criadorDePaletas(cPaleta, cores) {
@@ -20,7 +30,6 @@ function criadorDePaletas(cPaleta, cores) {
       cPaleta.appendChild(li);
     }
   }
-  document.querySelector('.color').className += ' selected';
 }
 // ============================ // ================================================= //
 
@@ -34,40 +43,32 @@ function criadordeQuadro() {
     board.appendChild(divPixel);
   }
 }
-
-//   FUNÇÃO PARA SELECIONAR A COR DO BALDE
-function seletorDeCor(cores) {
-  const btnColor = document.querySelectorAll('.color');
-  const corSelect = 'color selected';
-
-  for (let index = 0; index < btnColor.length; index += 1) {
-    btnColor[index].addEventListener('click', () => {
-      btnColor[0].className = 'color';
-      btnColor[1].className = 'color';
-      btnColor[2].className = 'color';
-      btnColor[3].className = 'color';
-      btnColor[index].className = corSelect;
-      const newTinta = cores[index];
-      pintarPixel(newTinta);
-    });
-  }
-}
 // ============================ // ================================================= //
 
-function pintarPixel(tinta) {
-  const pixels = document.querySelectorAll('.pixel');
+function eraseAllButton() {
+  const balde = document.querySelector('.balde');
+  const eraseAll = document.createElement('button');
+  eraseAll.setAttribute('id', 'clear-board');
+  eraseAll.innerHTML = 'Limpar';
+  balde.appendChild(eraseAll);
 
-  for (let index = 0; index < pixels.length; index += 1) {
-    pixels[index].addEventListener('click', () => {
-      pixels[index].style.backgroundColor = tinta;
-    });
-  }
+  eraseAllButton.addEventListener('click', () => {
+    const quadroBranco = document.querySelectorAll('.pixel');
+
+    for (let index = 0; index < quadroBranco.length; index += 1) {
+      quadroBranco[index].style.backgroundColor = 'white';
+    }
+  });
 }
 
-function apagar(tinta) {
-const pixels = document.querySelectorAll('.pixel');
+window.onload = () => {
+  const cores = ['black', 'pink', 'red', 'olive'];
+  const cPaleta = document.querySelector('#color-palette');
 
-  for (let index = 0; index < pixels.length; index += 1) {
-      pixels[index].style.backgroundColor = tinta;
-    }
-  }
+  criadorDePaletas(cPaleta, cores);
+  criadordeQuadro();
+  blackSelected();
+  document.addEventListener('click', pincel);
+
+  eraseAllButton();
+};

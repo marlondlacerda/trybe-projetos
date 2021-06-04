@@ -11,6 +11,7 @@ h1 {
 }
 
 #pixel-board {
+  margin-top: 10px;
   width: 210px;
   height: 210px;
   text-align: center;
@@ -23,4 +24,9 @@ h1 {
   border: solid 1px black;
   display: inline-block;
   background-color: white;
+}
+
+#clear-board {
+  margin-top: -5px;
+  margin-left: 50px;
 }
