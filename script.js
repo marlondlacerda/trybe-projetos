@@ -52,7 +52,7 @@ function eraseAllButton() {
   eraseAll.innerHTML = 'Limpar';
   balde.appendChild(eraseAll);
 
-  eraseAllButton.addEventListener('click', () => {
+  eraseAll.addEventListener('click', () => {
     const quadroBranco = document.querySelectorAll('.pixel');
 
     for (let index = 0; index < quadroBranco.length; index += 1) {
