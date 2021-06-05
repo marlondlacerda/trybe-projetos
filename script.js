@@ -12,14 +12,14 @@ function criadorDePaletas(cPaleta, cores) {
     }
   }
 }
-// << ============---============ >> //
+//                               << ============---============ >>
 
 // Define a cor preta como selecionada ao iniciar o site
 function blackSelected() {
   const black = document.querySelector('.color');
   black.classList.add('selected');
 }
-// << ============---============ >> //
+//                               << ============---============ >>
 
 // Função para escolher a cor do balde e pintar os pixels
 function pincel(click) {
@@ -33,7 +33,7 @@ function pincel(click) {
     clack.target.style.backgroundColor = corAtual;
   }
 }
-// << ============---============ >> //
+//                               << ============---============ >>
 
 // Cria o botão de Apagar tudo
 function eraseAllButton(balde) {
@@ -55,17 +55,67 @@ function eraseAllButton(balde) {
 
 // ============================ // ================================================= //
 
+//            AQUI FICA O TUDO REFERENTE AO BOARD, CRIAÇÃO DE PIXELS E INPUT
+
+// Função que irá colocar atributos no input criado dinamicamente
+function intputAttrCreate(input) {
+  const inputAttr = input;
+  inputAttr.id = 'board-size';
+  inputAttr.type = 'number';
+  inputAttr.min = 1;
+  return inputAttr;
+}
+//                               << ============---============ >>
+
+// Função que irá fazer os cálculos para criar píxels com o tamanho da largura e altura certa
+function createPixels(number, board) {
+  const quadro = board;
+  const newValue = number * number;
+  const width = (number * 40) + (number * 2); // cálculo para o tamanho do board ficar perfeito 
+  quadro.style.width = width;
+
+  for (let index = 0; index < newValue; index += 1) {
+    const divPixel = document.createElement('div');
+    divPixel.className = 'pixel';
+    quadro.appendChild(divPixel);
+  }
+}
+//                               << ============---============ >>
+
+// Função que irá criar o quadro
+function criadordeQuadro(number = 5) {
+  const board = document.createElement('div');
+  board.id = 'pixel-board';
+  document.body.appendChild(board);
+
+  createPixels(number, board);
+}
+//                               << ============---============ >>
+
+// Função para verificar as condições númeras que o usuário colocou no input
 function verifyNumber(inputButton) {
+  const pixels = 'pixel-board';
   inputButton.addEventListener('click', () => {
-    const number = parseInt(document.getElementById('board-size').value, 10);
+    let number = parseInt(document.getElementById('board-size').value, 10);
     if (!number) {
       alert('Board inválido!');
+    } else if (number < 5) {
+      number = 5;
+      document.getElementById(pixels).remove();
+      criadordeQuadro(number);
+    } else if (number > 50) {
+      number = 50;
+      document.getElementById(pixels).remove();
+      criadordeQuadro(number);
     } else {
-      console.log(number);
+      document.getElementById(pixels).remove();
+      criadordeQuadro(number);
     }
   });
 }
+//                               << ============---============ >>
 
+// Função para criar o input e o botão, após criado irá para a função de verificação
 function boardSizeCreate(balde) {
   const divInputButtons = document.createElement('div');
   balde.appendChild(divInputButtons);
@@ -76,9 +126,7 @@ function boardSizeCreate(balde) {
 
   // Cria o Input para escrever os números
   const input = document.createElement('input');
-  input.setAttribute('id', 'board-size');
-  input.setAttribute('type', 'number');
-  input.setAttribute('min', 1);
+  intputAttrCreate(input);
   divInputButtons.appendChild(input);
 
   // Cria o botão para o Input
@@ -88,20 +136,11 @@ function boardSizeCreate(balde) {
   divInputButtons.appendChild(inputButton);
   verifyNumber(inputButton);
 }
-
-// CRIA O QUADRO E OS DIVS QUE REPRESENTARÁ OS PIXELS
-function criadordeQuadro(board) {
-  for (let index = 0; index < 25; index += 1) {
-    const divPixel = document.createElement('div');
-    divPixel.className = 'pixel';
-    board.appendChild(divPixel);
-  }
-}
+//                               << ============---============ >>
 
 window.onload = () => {
   const cores = ['black', 'pink', 'red', 'olive'];
   const cPaleta = document.querySelector('#color-palette');
-  const board = document.querySelector('#pixel-board');
   const balde = document.querySelector('.balde');
 
   criadorDePaletas(cPaleta, cores);
@@ -109,7 +148,7 @@ window.onload = () => {
   eraseAllButton(balde);
 
   boardSizeCreate(balde);
-  criadordeQuadro(board);
+  criadordeQuadro();
 
   document.addEventListener('click', pincel);
 };
