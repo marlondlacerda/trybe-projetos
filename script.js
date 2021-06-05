@@ -1,15 +1,24 @@
 //            AQUI FICA O HEAD DO MAIN TUDO SOBRE A SESSÃO BALDE E AFINS
 
-// Função com objetivo de criar Listas ordenadas com os Baldes de Tintas para o usuário Selecionar.
-function criadorDePaletas(cPaleta, cores) {
-  for (let index = 0; index <= 3; index += 1) {
-    const li = document.createElement('li');
+// Calculo para criar paleta de cores aleatórias, créditos ao pessoal que me ajudou
+function randomColorGenerator() {
+  // source https://css-tricks.com/snippets/javascript/random-hex-color/
+  const randomColor = Math.floor(Math.random() * 16777215).toString(16);
+  return (`#${randomColor}`);
+}
 
-    for (let j = 0; j < cores.length; j += 1) {
-      li.className = 'color';
-      li.style.backgroundColor = cores[index];
-      cPaleta.appendChild(li);
-    }
+// Função com objetivo de criar Listas ordenadas com os Baldes de Tintas para o usuário Selecionar.
+function criadorDePaletas(cPaleta) {
+  const li = document.createElement('li');
+  li.className = 'color';
+  li.style.backgroundColor = 'black';
+  cPaleta.appendChild(li);
+
+  for (let index = 1; index < 4; index += 1) {
+    const newLi = document.createElement('li');
+    newLi.className = 'color';
+    newLi.style.backgroundColor = randomColorGenerator();
+    cPaleta.appendChild(newLi);
   }
 }
 //                               << ============---============ >>
@@ -71,7 +80,7 @@ function intputAttrCreate(input) {
 function createPixels(number, board) {
   const quadro = board;
   const newValue = number * number;
-  const width = (number * 40) + (number * 2); // cálculo para o tamanho do board ficar perfeito 
+  const width = (number * 40) + (number * 2); // cálculo para o tamanho do board ficar perfeito
   quadro.style.width = width;
 
   for (let index = 0; index < newValue; index += 1) {
@@ -95,22 +104,19 @@ function criadordeQuadro(number = 5) {
 // Função para verificar as condições númeras que o usuário colocou no input
 function verifyNumber(inputButton) {
   const pixels = 'pixel-board';
+  const boardSize = 'board-size';
   inputButton.addEventListener('click', () => {
-    let number = parseInt(document.getElementById('board-size').value, 10);
+    let number = parseInt(document.getElementById(boardSize).value, 10);
     if (!number) {
       alert('Board inválido!');
     } else if (number < 5) {
       number = 5;
-      document.getElementById(pixels).remove();
-      criadordeQuadro(number);
     } else if (number > 50) {
       number = 50;
-      document.getElementById(pixels).remove();
-      criadordeQuadro(number);
-    } else {
-      document.getElementById(pixels).remove();
-      criadordeQuadro(number);
     }
+    document.getElementById(pixels).remove();
+    criadordeQuadro(number);
+    document.getElementById(boardSize).value = '';
   });
 }
 //                               << ============---============ >>
@@ -139,11 +145,10 @@ function boardSizeCreate(balde) {
 //                               << ============---============ >>
 
 window.onload = () => {
-  const cores = ['black', 'pink', 'red', 'olive'];
   const cPaleta = document.querySelector('#color-palette');
   const balde = document.querySelector('.balde');
 
-  criadorDePaletas(cPaleta, cores);
+  criadorDePaletas(cPaleta);
   blackSelected();
   eraseAllButton(balde);
 
