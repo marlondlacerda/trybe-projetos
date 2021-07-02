@@ -23,13 +23,7 @@ function getEmployeeByName(employeeName) {
 
 function createEmployee(personalInfo, associatedWith) {
   // seu código aqui
-  return {
-    id: personalInfo.id,
-    firstName: personalInfo.firstName,
-    lastName: personalInfo.lastName,
-    managers: associatedWith.managers,
-    responsibleFor: associatedWith.responsibleFor,
-  };
+  return { ...personalInfo, ...associatedWith };
 }
 
 function isManager(id) {
@@ -39,8 +33,11 @@ function isManager(id) {
   return verifyI.managers.some((manager) => manager === '9e7d4524-363c-416a-8759-8aa7e50c0992');
 }
 
-function addEmployee(id, firstName, lastName, managers, responsibleFor) {
+function addEmployee(id, firstName, lastName, managers = [], responsibleFor = []) {
   // seu código aqui
+  const newEmployee = { id, firstName, lastName, managers, responsibleFor };
+  data.employees.push(newEmployee);
+  return data.employees;
 }
 
 function countAnimals(species) {
