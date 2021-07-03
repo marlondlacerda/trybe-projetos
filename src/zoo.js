@@ -55,7 +55,7 @@ function calculateEntry(entrants = 0) {
   const { Adult = 0, Child = 0, Senior = 0 } = entrants;
   return (Adult * data.prices.Adult) + (Child * data.prices.Child) + (Senior * data.prices.Senior);
 }
-console.log(calculateEntry());
+
 function getAnimalMap(options) {
   // seu código aqui
 }
