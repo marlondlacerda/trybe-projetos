@@ -40,10 +40,15 @@ function addEmployee(id, firstName, lastName, managers = [], responsibleFor = []
   return data.employees;
 }
 
-function countAnimals(species) {
+function countAnimals(findByName) {
   // seu código aqui
-}
+  const countSpecies = data.species
+    .reduce((acc, specie) => ({ ...acc, [specie.name]: specie.residents.length }), {});
 
+  if (!findByName) return countSpecies;
+  return (data.species.find((findSpecie) => findSpecie.name === findByName)).residents.length;
+}
+console.log(countAnimals('lions'));
 function calculateEntry(entrants) {
   // seu código aqui
 }
