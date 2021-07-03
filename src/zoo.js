@@ -43,16 +43,19 @@ function addEmployee(id, firstName, lastName, managers = [], responsibleFor = []
 function countAnimals(findByName) {
   // seu código aqui
   const countSpecies = data.species
+  // Source de pesquisa https://youtu.be/NiLUGy1Mh4U?t=946
     .reduce((acc, specie) => ({ ...acc, [specie.name]: specie.residents.length }), {});
 
   if (!findByName) return countSpecies;
   return (data.species.find((findSpecie) => findSpecie.name === findByName)).residents.length;
 }
-console.log(countAnimals('lions'));
-function calculateEntry(entrants) {
-  // seu código aqui
-}
 
+function calculateEntry(entrants = 0) {
+  // seu código aqui
+  const { Adult = 0, Child = 0, Senior = 0 } = entrants;
+  return (Adult * data.prices.Adult) + (Child * data.prices.Child) + (Senior * data.prices.Senior);
+}
+console.log(calculateEntry());
 function getAnimalMap(options) {
   // seu código aqui
 }
