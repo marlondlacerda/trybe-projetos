@@ -1,4 +1,3 @@
-const { employees } = require('./data');
 const data = require('./data');
 
 function getSpeciesByIds(...ids) {
@@ -87,8 +86,8 @@ function increasePrices(percentage) {
 function getEmployeeCoverage(idOrName) {
   // seu código aqui
   const fullName = (person) => `${person.firstName} ${person.lastName}`;
-  const verifyIdOrName = (person) => (person.firstName === idOrName) ||
-  (person.lastName === idOrName) || (person.id === idOrName);
+  const verifyIdOrName = (person) => (person.firstName === idOrName)
+  || (person.lastName === idOrName) || (person.id === idOrName);
   const findName = (arrayOfIds) => {
     const specieName = [];
     arrayOfIds.forEach((id) => specieName
