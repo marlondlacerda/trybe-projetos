@@ -4,6 +4,23 @@ const taskDone = 'task-done'
 const taskList = 'task-list';
 const taskText = 'task-text';
 
+toastr.options = {
+  "closeButton": false,
+  "debug": false,
+  "newestOnTop": false,
+  "progressBar": true,
+  "positionClass": "toast-top-right",
+  "preventDuplicates": true,
+  "showDuration": "50000",
+  "hideDuration": "50000",
+  "timeOut": "50000",
+  "extendedTimeOut": "50000",
+  "showEasing": "swing",
+  "hideEasing": "linear",
+  "showMethod": "fadeIn",
+  "hideMethod": "fadeOut"
+}
+
 // função que recebe o input com o valor digitado, ao clicar, adiciona o item na lista!
 const addTask = () => {
   const li = document.createElement('li');
@@ -125,7 +142,8 @@ const eraseAll = () => {
       while (complete.length > 0) {
         complete[0].parentNode.removeChild(complete[0]);
       }
-      return alert('Tarefa completada deletada com sucesso! (:');
+
+      return toastr["success"]("Você deletou as tarefas riscadas da lista!")
     }
   });
 }
@@ -151,6 +169,7 @@ const moveup = () => {
 
   upMove.addEventListener('click', () => {
     const selected = document.getElementsByClassName('selected');
+    toastr.success("My name is Inigo Montoya. You killed my father. Prepare to die!");
     if (select && selected[0]) {
       selected[0].parentNode.insertBefore(selected[0], selected[0].previousElementSibling);
     }

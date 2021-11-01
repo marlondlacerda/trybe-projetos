@@ -74,3 +74,12 @@ li {
 #buttonsList > button:hover::before {
   width: 100%;
 }
+
+.toast-success {
+  background-color: #18a999 !important;
+
+}
+.toast-title, .toast-message {
+  color: white;
+  font-weight: 800;
+}
