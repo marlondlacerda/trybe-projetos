@@ -7,17 +7,17 @@ const taskText = 'task-text';
 const addTask = () => {
   const li = document.createElement('li');
   const createTask = document.getElementById(taskList);
-  const getTaskText = document.getElementById(taskText).value;
-  const text = document.createTextNode(getTaskText);
+  const getTaskText = document.getElementById(taskText);
+  const text = document.createTextNode(getTaskText.value);
 
-  if (getTaskText === '') {
+  if (getTaskText.value === '') {
     return alert('Erro: Texto Vazio!');
   }
 
   li.className = task;
   li.appendChild(text);
   createTask.appendChild(li);
-  getTaskText = '';
+  getTaskText.value = '';
 }
 //     << ================== - - - ================== >>
 
@@ -66,7 +66,7 @@ const listOlCreator = () => {
 
 // Cria uma div dinamicamente onde vai ficar os botões embaixo das tarefas listadas.
 function createDivButtons() {
-  const divButtons = document.querySelector('.buttonsFooter');
+  const divButtons = document.querySelector('.inputs');
   const buttonsDiv = document.createElement('div');
   buttonsDiv.id = ('buttonsList');
   divButtons.appendChild(buttonsDiv);
@@ -78,9 +78,9 @@ function createDivButtons() {
 function buttonsLi() {
   const listButtons = document.getElementById('buttonsList');
 
-  const idText = ['remover-selecionado', 'mover-cima', 'mover-baixo', 'remover-finalizados',
-    'apaga-tudo', 'salvar-tarefas'];
-  const innerText = ['X', '⬆', '⬇', 'Limpar Completos', 'Limpar Lista', 'Salvar'];
+  const idText = ['remove-selected', 'move-up', 'move-down', 'remove-dones',
+    'remove-all', 'save'];
+  const innerText = ['X', '⬆', '⬇', 'Remover Tarefas Feitas', 'Limpar Lista', 'Salvar'];
 
   for (let index = 0; index < idText.length; index += 1) {
     const idIndex = idText[index];
@@ -93,13 +93,14 @@ function buttonsLi() {
 //     << ================== - - - ================== >>
 
 // Salva a lista atual no localstorage para que o usuário não perca ao dar F5
-function salvar() {
+const salvar = () => {
   // source https://gomakethings.com/saving-html-to-localstorage-with-vanilla-js/
-  const salvarButton = document.querySelector('#salvar-tarefas');
-  const verificarOl = document.querySelector('#task-list');
-
-  salvarButton.addEventListener('click', () => {
-    localStorage.setItem('verificarOl', verificarOl.innerHTML);
+  const saveButton = document.querySelector('#save');
+  const verificarOl = document.querySelector('#task-list').innerHTML;
+  console.log(verificarOl);
+  saveButton.addEventListener('click', () => {
+    // localStorage.setItem('verificarOl', verificarOl.innerHTML);
+    // localStorage.savedList = JSON.stringify(ol);
     return alert('Lista Salva com Sucesso');
   });
   const saved = localStorage.getItem('verificarOl');
@@ -112,7 +113,7 @@ function salvar() {
 
 // Apaga todas as tarefas de uma vez só
 function apagar() {
-  document.getElementById('apaga-tudo').addEventListener('click', () => {
+  document.getElementById('remove-all').addEventListener('click', () => {
   // source: https://www.codegrepper.com/code-examples/javascript/how+to+delete+all+elements+with+a+class+name
     const listed = document.getElementsByClassName(task);
     while (listed.length > 0) {
@@ -120,7 +121,7 @@ function apagar() {
     }
     return alert('Lista de tarefas deletada com sucesso! (:');
   });
-  document.getElementById('remover-finalizados').addEventListener('click', () => {
+  document.getElementById('remove-dones').addEventListener('click', () => {
     const complete = document.getElementsByClassName('completed');
     while (complete.length > 0) {
       complete[0].parentNode.removeChild(complete[0]);
@@ -132,7 +133,7 @@ function apagar() {
 
 // Apaga apenas a tarefa selecionada
 function seletados() {
-  const deletarSeletado = document.querySelector('#remover-selecionado');
+  const deletarSeletado = document.querySelector('#remove-selected');
   const selected = document.getElementsByClassName('selected');
   deletarSeletado.addEventListener('click', () => {
     selected[0].parentNode.removeChild(selected[0]);
@@ -143,7 +144,7 @@ function seletados() {
 // Move para cima a tarefa selecionada
 // source https://stackoverflow.com/questions/34913953/move-an-element-one-place-up-or-down-in-the-dom-tree-with-javascript
 function moverCima() {
-  const upMove = document.querySelector('#mover-cima');
+  const upMove = document.querySelector('#move-up');
 
   upMove.addEventListener('click', () => {
     const selected = document.getElementsByClassName('selected');
@@ -155,7 +156,7 @@ function moverCima() {
 
 // Move para baixo a tarefa selecionada
 function moverBaixo() {
-  const downMove = document.querySelector('#mover-baixo');
+  const downMove = document.querySelector('#move-down');
 
   downMove.addEventListener('click', () => {
     const selected = document.getElementsByClassName('selected');
