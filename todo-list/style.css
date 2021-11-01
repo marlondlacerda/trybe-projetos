@@ -24,7 +24,7 @@ li {
   user-select: none;
 }
 
-#criar-tarefa {
+#create-task-button {
   margin: -25px;
   height: 25px;
   width: 100px;
@@ -39,4 +39,12 @@ li {
 
 .completed {
   text-decoration: line-through;
+}
+
+#buttonsList {
+  margin-top: 15px;
+}
+
+#buttonsList > button {
+  margin-left: 5px;
 }

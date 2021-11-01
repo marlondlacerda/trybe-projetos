@@ -3,28 +3,30 @@ const task = 'task';
 const taskList = 'task-list';
 const taskText = 'task-text';
 
+// função que recebe o input com o valor digitado, ao clicar, adiciona o item na lista!
 const addTask = () => {
   const li = document.createElement('li');
   const createTask = document.getElementById(taskList);
   const getTaskText = document.getElementById(taskText).value;
+  const text = document.createTextNode(getTaskText);
+
   if (getTaskText === '') {
     return alert('Erro: Texto Vazio!');
   }
-  const text = document.createTextNode(getTaskText);
+
   li.className = task;
   li.appendChild(text);
   createTask.appendChild(li);
-
   getTaskText = '';
 }
-//                      << ================== - - - ================== >>
+//     << ================== - - - ================== >>
 
-// Vai criar o botão para executar o input seja com enter ou clicando no botão
+// Vai criar o botão para executar o input seja com enter ou clicando no botão.
 const textFunc = (inputSub, text) => {
-  const main = document.querySelector('.inputButtons');
-  main.appendChild(inputSub);
   const getText = document.getElementById(text);
+  const main = document.querySelector('.inputButtons');
 
+  main.appendChild(inputSub);
   inputSub.addEventListener('click', addTask);
   getText.addEventListener('keypress', (e) => {
     if (e.key === 'Enter') {
@@ -32,10 +34,10 @@ const textFunc = (inputSub, text) => {
     }
   });
 }
-//                      << ================== - - - ================== >>
+//     << ================== - - - ================== >>
 
 // Cria os elementos html do input e o botão dinamicamente
-function inputCreator(text) {
+const inputCreator = (text) => {
   const main = document.querySelector('.inputButtons');
 
   // Cria o botão input Text abaixo
@@ -43,23 +45,24 @@ function inputCreator(text) {
   inputText.setAttribute('type', 'text');
   inputText.id = text;
   main.appendChild(inputText);
+
   // Cria o botão Adicionar embaixo
   const inputSub = document.createElement('button');
-  inputSub.setAttribute('id', 'criar-tarefa');
+  inputSub.setAttribute('id', 'create-task-button');
   inputSub.innerText = 'ADICIONAR';
   textFunc(inputSub, text);
 }
-//                      << ================== - - - ================== >>
+//     << ================== - - - ================== >>
 
 // Cria a OL onde vai receber a lista das tarefas
-function listOlCreator() {
-  const main = document.querySelector('.listas');
+const listOlCreator = () => {
+  const main = document.querySelector('.lists');
+  const ol = document.createElement('ol');
 
-  const listOl = document.createElement('ol');
-  listOl.setAttribute('id', taskList);
-  main.appendChild(listOl);
+  ol.setAttribute('id', taskList);
+  main.appendChild(ol);
 }
-//                      << ================== - - - ================== >>
+//     << ================== - - - ================== >>
 
 // Cria uma div dinamicamente onde vai ficar os botões embaixo das tarefas listadas.
 function createDivButtons() {
@@ -68,7 +71,7 @@ function createDivButtons() {
   buttonsDiv.id = ('buttonsList');
   divButtons.appendChild(buttonsDiv);
 }
-//                      << ================== - - - ================== >>
+//     << ================== - - - ================== >>
 
 // Cria os botões na div com os ids e textos dentro do array usando um loop.
 // Motivo de eu ter feito isso é por conta do lint mandando refatorar.
@@ -87,7 +90,7 @@ function buttonsLi() {
     listButtons.appendChild(identificador);
   }
 }
-//                      << ================== - - - ================== >>
+//     << ================== - - - ================== >>
 
 // Salva a lista atual no localstorage para que o usuário não perca ao dar F5
 function salvar() {
@@ -105,7 +108,7 @@ function salvar() {
     verificarOl.innerHTML = saved;
   }
 }
-//                      << ================== - - - ================== >>
+//     << ================== - - - ================== >>
 
 // Apaga todas as tarefas de uma vez só
 function apagar() {
@@ -125,7 +128,7 @@ function apagar() {
     return alert('Tarefa completada deletada com sucesso! (:');
   });
 }
-//                      << ================== - - - ================== >>
+//     << ================== - - - ================== >>
 
 // Apaga apenas a tarefa selecionada
 function seletados() {
@@ -135,7 +138,7 @@ function seletados() {
     selected[0].parentNode.removeChild(selected[0]);
   });
 }
-//                      << ================== - - - ================== >>
+//     << ================== - - - ================== >>
 
 // Move para cima a tarefa selecionada
 // source https://stackoverflow.com/questions/34913953/move-an-element-one-place-up-or-down-in-the-dom-tree-with-javascript
@@ -161,7 +164,7 @@ function moverBaixo() {
     }
   });
 }
-//                      << ================== - - - ================== >>
+//     << ================== - - - ================== >>
 
 // Apaga apenas a tarefa selecionada.
 function completed(lista) {
@@ -173,7 +176,7 @@ function completed(lista) {
     lista.target.classList.remove('completed');
   }
 }
-//                      << ================== - - - ================== >>
+//     << ================== - - - ================== >>
 
 // Ao clicar na tarefa, ele verifica se é uma tarefa selecionada ou não
 function clickTarefas(clack) {
@@ -187,7 +190,7 @@ function clickTarefas(clack) {
     selecionado = clack.target;
   }
 }
-//                      << ================== - - - ================== >>
+//     << ================== - - - ================== >>
 
 window.onload = () => {
   inputCreator(taskText);
