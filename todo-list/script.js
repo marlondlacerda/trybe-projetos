@@ -20,13 +20,13 @@ const addTask = () => {
 //                      << ================== - - - ================== >>
 
 // Vai criar o botão para executar o input seja com enter ou clicando no botão
-function textFunc(inputSub, text) {
+const textFunc = (inputSub, text) => {
   const main = document.querySelector('.inputButtons');
   main.appendChild(inputSub);
-  const textoTarefa = document.getElementById(text);
+  const getText = document.getElementById(text);
 
   inputSub.addEventListener('click', addTask);
-  textoTarefa.addEventListener('keypress', (e) => {
+  getText.addEventListener('keypress', (e) => {
     if (e.key === 'Enter') {
       addTask();
     }
