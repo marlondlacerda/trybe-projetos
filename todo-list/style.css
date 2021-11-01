@@ -1,5 +1,6 @@
 * {
   font-family: 'Roboto', sans-serif;
+  color: #484349;
 }
 
 body {
@@ -7,34 +8,35 @@ body {
 }
 
 input {
-  width: 200px;
   height: 20px;
   padding-right: 50px;
+  width: 200px;
 }
 
 ol {
   display: inline-block;
-  max-width: 800px;
-  margin-right: auto;
   margin-left: auto;
+  margin-right: auto;
+  max-width: 800px;
 }
 
 li {
+  font-size: 2.5em;
   text-align: none;
   user-select: none;
 }
 
 #create-task-button {
-  margin: -25px;
-  height: 25px;
-  width: 100px;
-  background: blue;
-  color: white;
+  background: #18a999;
   border: 0;
+  color: white;
+  margin: -35px;
+  height: 35px;
+  width: 100px;
 }
 
 .selected {
-  background-color: gray;
+  background-color: #a09a9d;
 }
 
 .task-done {
@@ -46,5 +48,29 @@ li {
 }
 
 #buttonsList > button {
+  background: transparent;
+  border: 2px solid #484349;
+  border-radius: 8px;
+  color: #484349;
+  cursor: pointer;
+  font-size: 1.2rem;
   margin-left: 5px;
+  padding: 3px 10px;
+  position: relative;
+}
+
+#buttonsList > button::before {
+  background: #8AF3FF;
+  content: '';
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  transition: all .5s ease;
+  width: 0;
+  z-index: -1;
+}
+
+#buttonsList > button:hover::before {
+  width: 100%;
 }

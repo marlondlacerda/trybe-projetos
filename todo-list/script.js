@@ -110,7 +110,7 @@ const saveOnLocalStorage = () => {
 //     << ================== - - - ================== >>
 
 // Apaga todas as tarefas de uma vez só
-const apagar = () => {
+const eraseAll = () => {
   // source: https://www.codegrepper.com/code-examples/javascript/how+to+delete+all+elements+with+a+class+name
   document.getElementById('remove-all').addEventListener('click', () => {
     const listed = document.getElementsByClassName(task);
@@ -120,11 +120,13 @@ const apagar = () => {
     return alert('Lista de tarefas deletada com sucesso! (:');
   });
   document.getElementById('remove-dones').addEventListener('click', () => {
-    const complete = document.getElementsByClassName('completed');
-    while (complete.length > 0) {
-      complete[0].parentNode.removeChild(complete[0]);
+    const complete = document.getElementsByClassName(taskDone);
+    if (complete.length > 0) {
+      while (complete.length > 0) {
+        complete[0].parentNode.removeChild(complete[0]);
+      }
+      return alert('Tarefa completada deletada com sucesso! (:');
     }
-    return alert('Tarefa completada deletada com sucesso! (:');
   });
 }
 //     << ================== - - - ================== >>
@@ -149,7 +151,7 @@ const moveup = () => {
 
   upMove.addEventListener('click', () => {
     const selected = document.getElementsByClassName('selected');
-    if (select && selected[0].previousElementSibling) {
+    if (select && selected[0]) {
       selected[0].parentNode.insertBefore(selected[0], selected[0].previousElementSibling);
     }
   });
@@ -158,10 +160,10 @@ const moveup = () => {
 // Move para baixo a tarefa selecionada
 const moveDown = () => {
   const downMove = document.querySelector('#move-down');
-
+  
   downMove.addEventListener('click', () => {
     const selected = document.getElementsByClassName('selected');
-    if (select && selected[0].nextElementSibling) {
+    if (select && selected[0].nextElementSibling ) {
       selected[0].parentNode.insertBefore(selected[0].nextElementSibling, selected[0]);
     }
   });
@@ -181,12 +183,13 @@ const concluded = ({ target }) => {
 //     << ================== - - - ================== >>
 
 // Ao clicar na tarefa, ele verifica se é uma tarefa selecionada ou não
-const clickTarefas = (clack) => {
-  if (clack.target.classList.contains(task)) {
-    if (select === clack.target) return;
-    if (select) select.classList.remove('selected');
-    clack.target.classList.add('selected');
-    select = clack.target;
+const clickTask = ({ target }) => {
+  if (target.classList.contains(task)) {
+    if (select === target) return;
+    if (select)
+    select.classList.remove('selected');
+    target.classList.add('selected');
+    select = target;
   }
 }
 //     << ================== - - - ================== >>
@@ -196,12 +199,12 @@ window.onload = () => {
   listOlCreator();
   createDivButtons();
   buttonsLi();
-  apagar();
+  eraseAll();
   saveOnLocalStorage();
   tasksSelected();
   moveup();
   moveDown();
 
   document.addEventListener('dblclick', concluded);
-  document.addEventListener('click', clickTarefas);
+  document.addEventListener('click', clickTask);
 };
