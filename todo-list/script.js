@@ -1,4 +1,4 @@
-let selecionado;
+let select;
 const task = 'task';
 const taskList = 'task-list';
 const taskText = 'task-text';
@@ -96,25 +96,22 @@ function buttonsLi() {
 const salvar = () => {
   // source https://gomakethings.com/saving-html-to-localstorage-with-vanilla-js/
   const saveButton = document.querySelector('#save');
-  const verificarOl = document.querySelector('#task-list').innerHTML;
-  console.log(verificarOl);
+  const taskOnStorage = document.querySelector('#task-list');
   saveButton.addEventListener('click', () => {
-    // localStorage.setItem('verificarOl', verificarOl.innerHTML);
-    // localStorage.savedList = JSON.stringify(ol);
+    localStorage.savedList = JSON.stringify(taskOnStorage.innerHTML);
     return alert('Lista Salva com Sucesso');
   });
-  const saved = localStorage.getItem('verificarOl');
 
-  if (saved) {
-    verificarOl.innerHTML = saved;
+  if (localStorage.savedList) {
+    taskOnStorage.innerHTML = JSON.parse(localStorage.savedList)
   }
 }
 //     << ================== - - - ================== >>
 
 // Apaga todas as tarefas de uma vez só
-function apagar() {
-  document.getElementById('remove-all').addEventListener('click', () => {
+const apagar = () => {
   // source: https://www.codegrepper.com/code-examples/javascript/how+to+delete+all+elements+with+a+class+name
+  document.getElementById('remove-all').addEventListener('click', () => {
     const listed = document.getElementsByClassName(task);
     while (listed.length > 0) {
       listed[0].parentNode.removeChild(listed[0]);
@@ -132,35 +129,38 @@ function apagar() {
 //     << ================== - - - ================== >>
 
 // Apaga apenas a tarefa selecionada
-function seletados() {
-  const deletarSeletado = document.querySelector('#remove-selected');
+const tasksSelected = () => {
+  const deleteSelected = document.querySelector('#remove-selected');
   const selected = document.getElementsByClassName('selected');
-  deletarSeletado.addEventListener('click', () => {
-    selected[0].parentNode.removeChild(selected[0]);
+
+    deleteSelected.addEventListener('click', () => {
+    if (selected.length > 0) {
+    selected[0].parentNode.removeChild(selected[0])
+    };
   });
 }
 //     << ================== - - - ================== >>
 
 // Move para cima a tarefa selecionada
 // source https://stackoverflow.com/questions/34913953/move-an-element-one-place-up-or-down-in-the-dom-tree-with-javascript
-function moverCima() {
+const moveup = () => {
   const upMove = document.querySelector('#move-up');
 
   upMove.addEventListener('click', () => {
     const selected = document.getElementsByClassName('selected');
-    if (selecionado && selected[0].previousElementSibling) {
+    if (select && selected[0].previousElementSibling) {
       selected[0].parentNode.insertBefore(selected[0], selected[0].previousElementSibling);
     }
   });
 }
 
 // Move para baixo a tarefa selecionada
-function moverBaixo() {
+const moveDown = () => {
   const downMove = document.querySelector('#move-down');
 
   downMove.addEventListener('click', () => {
     const selected = document.getElementsByClassName('selected');
-    if (selecionado && selected[0].nextElementSibling) {
+    if (select && selected[0].nextElementSibling) {
       selected[0].parentNode.insertBefore(selected[0].nextElementSibling, selected[0]);
     }
   });
@@ -182,13 +182,13 @@ function completed(lista) {
 // Ao clicar na tarefa, ele verifica se é uma tarefa selecionada ou não
 function clickTarefas(clack) {
   if (clack.target.classList.contains(task)) {
-    if (selecionado === clack.target) return;
+    if (select === clack.target) return;
 
-    if (selecionado) selecionado.classList.remove('selected');
+    if (select) select.classList.remove('selected');
 
     clack.target.classList.add('selected');
 
-    selecionado = clack.target;
+    select = clack.target;
   }
 }
 //     << ================== - - - ================== >>
@@ -200,9 +200,9 @@ window.onload = () => {
   buttonsLi();
   apagar();
   salvar();
-  seletados();
-  moverCima();
-  moverBaixo();
+  tasksSelected();
+  moveup();
+  moveDown();
 
   document.addEventListener('dblclick', completed);
   document.addEventListener('click', clickTarefas);
