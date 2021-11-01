@@ -37,7 +37,7 @@ li {
   background-color: gray;
 }
 
-.completed {
+.task-done {
   text-decoration: line-through;
 }
 

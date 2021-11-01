@@ -1,5 +1,6 @@
 let select;
 const task = 'task';
+const taskDone = 'task-done'
 const taskList = 'task-list';
 const taskText = 'task-text';
 
@@ -40,13 +41,13 @@ const textFunc = (inputSub, text) => {
 const inputCreator = (text) => {
   const main = document.querySelector('.inputButtons');
 
-  // Cria o botão input Text abaixo
+  // Cria o botão input Text
   const inputText = document.createElement('input');
   inputText.setAttribute('type', 'text');
   inputText.id = text;
   main.appendChild(inputText);
 
-  // Cria o botão Adicionar embaixo
+  // Cria o botão Adicionar
   const inputSub = document.createElement('button');
   inputSub.setAttribute('id', 'create-task-button');
   inputSub.innerText = 'ADICIONAR';
@@ -93,7 +94,7 @@ function buttonsLi() {
 //     << ================== - - - ================== >>
 
 // Salva a lista atual no localstorage para que o usuário não perca ao dar F5
-const salvar = () => {
+const saveOnLocalStorage = () => {
   // source https://gomakethings.com/saving-html-to-localstorage-with-vanilla-js/
   const saveButton = document.querySelector('#save');
   const taskOnStorage = document.querySelector('#task-list');
@@ -167,27 +168,24 @@ const moveDown = () => {
 }
 //     << ================== - - - ================== >>
 
-// Apaga apenas a tarefa selecionada.
-function completed(lista) {
-  const completado = document.querySelector('.completed');
+// Apaga apenas a tarefa feita selecionada.
+const concluded = ({ target }) => {
+  const done = document.querySelector('.task-done');
 
-  if (lista.target.classList.contains(task) && lista.target !== completado) {
-    lista.target.classList.add('completed');
-  } else if (lista.target.classList.contains('completed')) {
-    lista.target.classList.remove('completed');
+  if (target.classList.contains(task) && target !== done) {
+    target.classList.add(taskDone);
+  } else if (target.classList.contains(taskDone)) {
+    target.classList.remove(taskDone);
   }
 }
 //     << ================== - - - ================== >>
 
 // Ao clicar na tarefa, ele verifica se é uma tarefa selecionada ou não
-function clickTarefas(clack) {
+const clickTarefas = (clack) => {
   if (clack.target.classList.contains(task)) {
     if (select === clack.target) return;
-
     if (select) select.classList.remove('selected');
-
     clack.target.classList.add('selected');
-
     select = clack.target;
   }
 }
@@ -199,11 +197,11 @@ window.onload = () => {
   createDivButtons();
   buttonsLi();
   apagar();
-  salvar();
+  saveOnLocalStorage();
   tasksSelected();
   moveup();
   moveDown();
 
-  document.addEventListener('dblclick', completed);
+  document.addEventListener('dblclick', concluded);
   document.addEventListener('click', clickTarefas);
 };
