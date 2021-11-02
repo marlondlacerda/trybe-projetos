@@ -1,4 +1,5 @@
-# Projetos
+# Boas vindas ao repositório do projeto Lista de Tarefas!
+
 <div align="center">
   <img height="150px" align="right" src="https://theme.zdassets.com/theme_assets/9633455/9814df697eaf49815d7df109110815ff887b3457.png" />
   <div align="left" style="display: inline_block">
@@ -17,5 +18,9 @@
 ---
 
 # HABILIDADES
- 
+- Manipular CSS
+- Manipular Javascript
+---
+## O que foi desenvolvido
+- Será desenvolvido uma lista de tarefas usando <code>HTML</code>, <code>CSS</code> e JavaScript.
 ---
