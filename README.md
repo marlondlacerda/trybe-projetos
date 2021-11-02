@@ -11,7 +11,11 @@
  
 ## Lista dos Projetos
 <div align="left" style="display: inline_block">
-  <a href="https://marlondlacerda.github.io/trybe-projetos/todo-list/">Todo List Project</a>
+  <ul>
+    <li>
+        <a href="https://github.com/marlondlacerda/trybe-projetos/tree/main/todo-list#readme">Todo List Project</a>
+    </li>
+  <ul>
 </div>
 
 ---
