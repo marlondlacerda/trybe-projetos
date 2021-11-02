@@ -41,4 +41,4 @@
 - [x] 13 - Adicione dois botões, um com ícone ⬆ e outro com ⬇, que permitam mover o item selecionado para cima ou para baixo na lista de tarefas
 - [x] 14 - Adicione um botão que quando clicado, remove o item selecionado
 ---
-<a href="https://github.com/marlondlacerda/trybe-projetos">Voltar para o repositório Raiz</a>
+<a href="https://github.com/marlondlacerda/trybe-projetos">Voltar para o repositório Raiz</a> - <a href="https://github.com/marlondlacerda/trybe-projetos/tree/main/todo-list#readme">voltar para o topo</a>
