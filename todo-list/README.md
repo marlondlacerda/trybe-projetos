@@ -24,7 +24,14 @@
 ## O que foi desenvolvido
 - Será desenvolvido uma lista de tarefas usando <code>HTML</code>, <code>CSS</code> e <code>JavaScript</code>.
 ---
-# Requisitos do projeto
-- [x] Write the press release
-- [ ] Update the website
-- [ ] Contact the media
+### Requisitos do projeto
+- [x] Crie um Header com um título em uma tag
+- [x] Adicione abaixo do título um pequeno parágrafo dando a descrição do que acontece ao clicar
+- [x] Adicione um input onde a pessoa usuária poderá digitar o nome do item que deseja adicionar à lista
+- [x] Adicione uma lista ordernada de tarefas
+- [x]
+- [x]
+- [x]
+- [x]
+- [x]
+- [x]
