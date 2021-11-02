@@ -11,7 +11,7 @@
 
 <div align="left" style="display: inline_block">
   <h2>Lista dos Projetos</h2>
-  <a href="https://marlondlacerda.github.io/trybe-projetos/todo-list/">Todo List Project<a>
+  <a href="https://marlondlacerda.github.io/trybe-projetos/todo-list/">Todo List Project</a>
 </div>
 
 ---
