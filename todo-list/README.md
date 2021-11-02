@@ -39,4 +39,6 @@
 ## BÔNUS
 - [x] 12 - Adicione um botão que salve o conteúdo da lista. Se você fechar e reabrir a página, a lista deve continuar no estado em que estava
 - [x] 13 - Adicione dois botões, um com ícone ⬆ e outro com ⬇, que permitam mover o item selecionado para cima ou para baixo na lista de tarefas
-# - [x] 14 - Adicione um botão que quando clicado, remove o item selecionado
+- [x] 14 - Adicione um botão que quando clicado, remove o item selecionado
+---
+<a href="https://github.com/marlondlacerda/trybe-projetos">Voltar para o repositório Raiz</a>
