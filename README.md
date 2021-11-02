@@ -12,5 +12,3 @@
   <h2>Lista dos Projetos</h2>
   <a href="https://marlondlacerda.github.io/trybe-projetos/todo-list/">Todo List Project<a>
 </div>
-
-
