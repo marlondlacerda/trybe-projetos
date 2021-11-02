@@ -10,7 +10,7 @@
 
 ---
  
-## Lista dos Projetos
+## Deploy
 <div align="left" style="display: inline_block">
   <a href="https://marlondlacerda.github.io/trybe-projetos/todo-list/">Todo List Project</a>
 </div>
@@ -22,5 +22,9 @@
 - Manipular Javascript
 ---
 ## O que foi desenvolvido
-- Será desenvolvido uma lista de tarefas usando <code>HTML</code>, <code>CSS</code> e JavaScript.
+- Será desenvolvido uma lista de tarefas usando <code>HTML</code>, <code>CSS</code> e <code>JavaScript</code>.
 ---
+# Requisitos do projeto
+- [x] Write the press release
+- [ ] Update the website
+- [ ] Contact the media
