@@ -4,8 +4,11 @@
   <img height="150px" align="right" src="https://theme.zdassets.com/theme_assets/9633455/9814df697eaf49815d7df109110815ff887b3457.png" />
   <div align="left" style="display: inline_block">
     <h2>Módulo: Fundamentos do Desenvolvimento Web</h2>
-    <span>Esse repositório tem como intuíto guardar todos os projetos realizados no módulo de <b>Fundamentos do Desenvolvimento Web</b> na <a href="https://www.betrybe.com/"><b>Trybe</b></a>.</span>       </div>
-<br>
+    <span>
+      Projeto para por em prática tudo o que aprendeu de Javascript, HTML e CSS, onde você irá criar uma lista de tarefas, manipular o estado dessa lista e até salvar no local storage!
+    </span>
+  </div>
+  <br>
 </div>
 
 ---
@@ -41,4 +44,9 @@
 - [x] 13 - Adicione dois botões, um com ícone ⬆ e outro com ⬇, que permitam mover o item selecionado para cima ou para baixo na lista de tarefas
 - [x] 14 - Adicione um botão que quando clicado, remove o item selecionado
 ---
-<a href="https://github.com/marlondlacerda/trybe-projetos">Voltar para o repositório Raiz</a> - <a href="https://github.com/marlondlacerda/trybe-projetos/tree/main/todo-list#readme">voltar para o topo</a>
+<div align="left">
+  <a href="https://github.com/marlondlacerda/trybe-projetos">Voltar para o repositório Raiz</a> 
+</div>
+<div align="right">
+  <a href="https://github.com/marlondlacerda/trybe-projetos/tree/main/todo-list#readme">Voltar para o topo</a>
+</div>
