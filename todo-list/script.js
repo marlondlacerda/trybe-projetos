@@ -7,14 +7,15 @@ const taskText = 'task-text';
 toastr.options = {
   "closeButton": false,
   "debug": false,
-  "newestOnTop": false,
+  "newestOnTop": true,
   "progressBar": true,
   "positionClass": "toast-top-right",
   "preventDuplicates": true,
-  "showDuration": "50000",
-  "hideDuration": "50000",
-  "timeOut": "50000",
-  "extendedTimeOut": "50000",
+  "onclick": null,
+  "showDuration": "300",
+  "hideDuration": "1000",
+  "timeOut": "5000",
+  "extendedTimeOut": "1000",
   "showEasing": "swing",
   "hideEasing": "linear",
   "showMethod": "fadeIn",
@@ -29,7 +30,7 @@ const addTask = () => {
   const text = document.createTextNode(getTaskText.value);
 
   if (getTaskText.value === '') {
-    return alert('Erro: Texto Vazio!');
+    return toastr["error"]("Campo de texto vazio.", "Error!");
   }
 
   li.className = task;
@@ -62,12 +63,14 @@ const inputCreator = (text) => {
   const inputText = document.createElement('input');
   inputText.setAttribute('type', 'text');
   inputText.id = text;
+  inputText.placeholder= "Digite aqui sua tarefa"
   main.appendChild(inputText);
 
   // Cria o botão Adicionar
   const inputSub = document.createElement('button');
   inputSub.setAttribute('id', 'create-task-button');
-  inputSub.innerText = 'ADICIONAR';
+  inputSub.innerText = 'Criar tarefa';
+  inputSub.title = 'Clique aqui para adicionar a tarefa na lista!';
   textFunc(inputSub, text);
 }
 //     << ================== - - - ================== >>
@@ -98,12 +101,16 @@ function buttonsLi() {
 
   const idText = ['remove-selected', 'move-up', 'move-down', 'remove-dones',
     'remove-all', 'save'];
-  const innerText = ['X', '⬆', '⬇', 'Remover Tarefas Feitas', 'Limpar Lista', 'Salvar'];
+  const innerText = ['X', '⬆', '⬇', 'Remover tarefas concluídas', 'Limpar lista', 'Salvar'];
+  const title = ['Remover tarefa selecionada', 'Mover para cima', 'Mover para baixo',
+    'Remove apenas as tarefas concluídas', 'Remover todas as tarefas listadas',
+    'Salva sua lista no navegador'];
 
   for (let index = 0; index < idText.length; index += 1) {
     const idIndex = idText[index];
     const identificador = document.createElement('button');
     identificador.id = idIndex;
+    identificador.title = title[index];
     identificador.innerText = innerText[index];
     listButtons.appendChild(identificador);
   }
@@ -117,7 +124,7 @@ const saveOnLocalStorage = () => {
   const taskOnStorage = document.querySelector('#task-list');
   saveButton.addEventListener('click', () => {
     localStorage.savedList = JSON.stringify(taskOnStorage.innerHTML);
-    return alert('Lista Salva com Sucesso');
+    return toastr.success('Lista Salva com Sucesso');
   });
 
   if (localStorage.savedList) {
@@ -134,7 +141,7 @@ const eraseAll = () => {
     while (listed.length > 0) {
       listed[0].parentNode.removeChild(listed[0]);
     }
-    return alert('Lista de tarefas deletada com sucesso! (:');
+    return toastr.success('Lista deletada com sucesso!');
   });
   document.getElementById('remove-dones').addEventListener('click', () => {
     const complete = document.getElementsByClassName(taskDone);
@@ -169,7 +176,6 @@ const moveup = () => {
 
   upMove.addEventListener('click', () => {
     const selected = document.getElementsByClassName('selected');
-    toastr.success("My name is Inigo Montoya. You killed my father. Prepare to die!");
     if (select && selected[0]) {
       selected[0].parentNode.insertBefore(selected[0], selected[0].previousElementSibling);
     }
