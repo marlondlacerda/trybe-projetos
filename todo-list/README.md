@@ -13,14 +13,18 @@
 
 ---
  
-## Deploy
+## Preview
 <div align="left" style="display: inline_block">
-  <a href="https://marlondlacerda.github.io/trybe-projetos/todo-list/">Todo List Project</a>
+  <a href="https://marlondlacerda.github.io/trybe-projetos/todo-list/">Clique aqui</a> para ter acesso a um preview do App.
 </div>
 
 ---
 
-# HABILIDADES
+<div align="center">
+  <img src="https://user-images.githubusercontent.com/83839044/139926060-96ab3143-b9d7-4927-bc61-b59d4aca4091.png">
+</div>
+
+## HABILIDADES
 - Manipular CSS
 - Manipular Javascript
 ---
@@ -39,12 +43,17 @@
 - [x] 9 - Clicar duas vezes em um item, faz com que ele seja riscado, indicando que foi completo. Deve ser possível desfazer essa ação clicando novamente duas vezes no item
 - [x] 10 - Adicione um botão que ao ser clicado, deve apagar todos os itens da lista
 - [x] 11 - Adicione um botão que ao ser clicado, remove somente os elementos finalizados da sua lista
-## BÔNUS
+### BÔNUS
 - [x] 12 - Adicione um botão que salve o conteúdo da lista. Se você fechar e reabrir a página, a lista deve continuar no estado em que estava
 - [x] 13 - Adicione dois botões, um com ícone ⬆ e outro com ⬇, que permitam mover o item selecionado para cima ou para baixo na lista de tarefas
 - [x] 14 - Adicione um botão que quando clicado, remove o item selecionado
 ---
+## Librarys
 
+  <h3><a href="https://codeseven.github.io/toastr/">Toastr</a></h3>
+  <span>Toastr é uma biblioteca Javascript para notificações sem bloqueio do tipo Gnome / Growl. jQuery é necessário. O objetivo é criar uma biblioteca central simples que possa ser customizada e ampliada.</span>
+ 
+---
 <div align="left">
   <a href="https://github.com/marlondlacerda/trybe-projetos">Voltar para o repositório Raiz</a>
 </div>
