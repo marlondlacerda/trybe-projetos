@@ -13,9 +13,11 @@
 <div align="left" style="display: inline_block">
   <ul>
     <li>
-        <a href="https://github.com/marlondlacerda/trybe-projetos/tree/main/todo-list#readme">Todo List Project</a>
+        <a href="https://github.com/marlondlacerda/trybe-projetos/tree/main/todo-list#readme">
+        Todo List Project
+        </a>
     </li>
-  <ul>
+  </ul>
 </div>
 
 ---
