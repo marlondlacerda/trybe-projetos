@@ -49,5 +49,5 @@
   <a href="https://github.com/marlondlacerda/trybe-projetos">Voltar para o repositório Raiz</a>
 </div>
 <div align="center">
-  <a href="https://github.com/marlondlacerda/trybe-projetos/tree/main/todo-list#readme">Voltar para o topo</a>
+  <a href="https://github.com/marlondlacerda/trybe-projetos/tree/main/todo-list#readme">⬆ Voltar para o topo</a>
 </div>
