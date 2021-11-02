@@ -63,12 +63,14 @@ const inputCreator = (text) => {
   const inputText = document.createElement('input');
   inputText.setAttribute('type', 'text');
   inputText.id = text;
+  inputText.placeholder= "Digite aqui sua tarefa"
   main.appendChild(inputText);
 
   // Cria o botão Adicionar
   const inputSub = document.createElement('button');
   inputSub.setAttribute('id', 'create-task-button');
   inputSub.innerText = 'Criar tarefa';
+  inputSub.title = 'Clique aqui para adicionar a tarefa na lista!';
   textFunc(inputSub, text);
 }
 //     << ================== - - - ================== >>
@@ -99,12 +101,16 @@ function buttonsLi() {
 
   const idText = ['remove-selected', 'move-up', 'move-down', 'remove-dones',
     'remove-all', 'save'];
-  const innerText = ['X', '⬆', '⬇', 'Remover Tarefas Feitas', 'Limpar Lista', 'Salvar'];
+  const innerText = ['X', '⬆', '⬇', 'Remover tarefas concluídas', 'Limpar lista', 'Salvar'];
+  const title = ['Remover tarefa selecionada', 'Mover para cima', 'Mover para baixo',
+    'Remove apenas as tarefas concluídas', 'Remover todas as tarefas listadas',
+    'Salva sua lista no navegador'];
 
   for (let index = 0; index < idText.length; index += 1) {
     const idIndex = idText[index];
     const identificador = document.createElement('button');
     identificador.id = idIndex;
+    identificador.title = title[index];
     identificador.innerText = innerText[index];
     listButtons.appendChild(identificador);
   }
