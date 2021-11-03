@@ -27,5 +27,5 @@ Cada pasta acima contém um arquivo README com detalhes de cada projetos.
 
 #### Projetos
 
-- [x] Bloco 5 - Todo List - [Deploy](https://marlondlacerda.github.io/trybe-projetos/todo-list/) | [Código Fonte](https://github.com/marlondlacerda/trybe-projetos/tree/main/todo-list#readme)
+- [x] Bloco 5 - Todo List - [Deploy](https://todo-list-marlonlacerda.vercel.app/) | [Código Fonte](https://github.com/marlondlacerda/trybe-projetos/tree/main/todo-list#readme)
  
