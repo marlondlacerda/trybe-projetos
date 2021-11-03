@@ -14,7 +14,7 @@
  
 ## Preview
 <div align="left" style="display: inline_block">
-  <a href="https://marlondlacerda.github.io/trybe-projetos/todo-list/">Clique aqui</a> para ter acesso a um preview do App.
+  <a href="https://todo-list-marlonlacerda.vercel.app/">Clique aqui</a> para ter acesso a um preview do App.
 </div>
 
 ---
