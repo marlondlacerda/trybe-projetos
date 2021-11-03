@@ -11,7 +11,7 @@ Este repositório foi desenvolvido com intuito de de conter todas as atividades 
 
 </div>
 
-## 🟥 Checklist
+## 🟥 Checklista
 
 - [x] Fundamentals: Bloco 1 ao 10 
 - [ ] Front-End: Bloco 11 ao 19
