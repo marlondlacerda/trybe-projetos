@@ -31,7 +31,9 @@
 ## O que foi desenvolvido
 - Será desenvolvido uma lista de tarefas usando <code>HTML</code>, <code>CSS</code> e <code>JavaScript</code>.
 ---
-## Requisitos do projeto
+<details>
+    <summary>Requisitos do projeto</summary>
+
 - [x] 1 - Crie um Header com um título em uma tag
 - [x] 2 - Adicione abaixo do título um pequeno parágrafo dando a descrição do que acontece ao clicar
 - [x] 3 - Adicione um input onde a pessoa usuária poderá digitar o nome do item que deseja adicionar à lista
@@ -47,6 +49,8 @@
 - [x] 12 - Adicione um botão que salve o conteúdo da lista. Se você fechar e reabrir a página, a lista deve continuar no estado em que estava
 - [x] 13 - Adicione dois botões, um com ícone ⬆ e outro com ⬇, que permitam mover o item selecionado para cima ou para baixo na lista de tarefas
 - [x] 14 - Adicione um botão que quando clicado, remove o item selecionado
+</details>
+
 ---
 ## Librarys
 
