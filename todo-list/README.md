@@ -5,13 +5,12 @@
   <div align="left" style="display: inline_block">
     <h2>Módulo: Fundamentos do Desenvolvimento Web</h2>
     <span>
-      Projeto para por em prática tudo o que aprendeu de Javascript, HTML e CSS, onde você irá criar uma lista de tarefas, manipular o estado dessa lista e até salvar no local storage!
+      Este Repositório possuí projeto desenvolvido no período que estive na Trybe, abordando sobre conceitos de estilização, manipulação do DOM com Javascript e utilização do Local Storage para guardar notas referente ao usuário que está na aplicação.
     </span>
   </div>
   <br>
 </div>
 
----
  
 ## Preview
 <div align="left" style="display: inline_block">
@@ -27,9 +26,10 @@
 ## HABILIDADES
 - Manipular CSS
 - Manipular Javascript
----
+- Manipular Local Storage
+
 ## O que foi desenvolvido
-- Será desenvolvido uma lista de tarefas usando <code>HTML</code>, <code>CSS</code> e <code>JavaScript</code>.
+- Uma lista de tarefas usando <code>HTML</code>, <code>CSS</code> e <code>JavaScript</code>.
 ---
 <details>
     <summary>Requisitos do projeto</summary>
@@ -59,7 +59,7 @@
  
 ---
 <div align="left">
-  <a href="https://github.com/marlondlacerda/trybe-projetos">Voltar para o repositório Raiz</a>
+  <a href="https://github.com/marlondlacerda/trybe-projetos">Voltar para o repositório principal</a>
 </div>
 <div align="center">
   <a href="https://github.com/marlondlacerda/trybe-projetos/tree/main/todo-list#readme">⬆ Voltar para o topo</a>
