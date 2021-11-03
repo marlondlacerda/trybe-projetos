@@ -26,6 +26,6 @@ Cada pasta acima contém um arquivo README com detalhes de cada projetos.
 ### 🖥 Módulo - Fundamentos do Desenvolvimento Web
 
 #### Projetos
-
-- [x] Bloco 5 - Todo List - [Deploy](https://todo-list-marlonlacerda.vercel.app/) | [Código Fonte](https://github.com/marlondlacerda/trybe-projetos/tree/main/fundamentals/bloco_5/todo-list#readme)
+- [x] Bloco 3 - Lessons Learned - [Deploy](https://marlondlacerda-lessons-learned.vercel.app/) | [Código Fonte](https://github.com/marlondlacerda/trybe-projetos/tree/main/fundamentals/bloco_3/lessons-learned#readme)
+- [x] Bloco 5 - Todo List - [Deploy](https://marlondlacerda-todo-list.vercel.app/) | [Código Fonte](https://github.com/marlondlacerda/trybe-projetos/tree/main/fundamentals/bloco_5/todo-list#readme)
  
