@@ -1,27 +1,44 @@
-# Projetos
-<div align="center">
-  <img height="150px" align="right" src="https://theme.zdassets.com/theme_assets/9633455/9814df697eaf49815d7df109110815ff887b3457.png" />
-  <div align="left" style="display: inline_block">
-    <h2>Módulo: Fundamentos do Desenvolvimento Web</h2>
-    <span>Esse repositório tem como intuíto guardar todos os projetos realizados no módulo de <b>Fundamentos do Desenvolvimento Web</b> na <a href="https://www.betrybe.com/" target="_blank"><b>Trybe</b></a>.</span>       </div>
-<br>
+
+<div align=center>
+
+# 🟢 Trybe Studies 🟢
+
+Este repositório foi desenvolvido com intuito de de conter todas as atividades e projetos desenvolvidos no período que estive na <b>Trybe</b>.
+
+<a href="https://www.betrybe.com/" target="_blank">
+<img src="https://freecourse.betrybe.com/images/trybe-logo-e10dbaaa26462aa149b81a924b00df07.png?vsn=d" width="250px">
+</a>
+
 </div>
 
----
- 
+## 🟥 Checklist
+
+- [x] Fundamentals: Bloco 1 ao 10 
+- [ ] Front-End: Bloco 11 ao 19
+- [ ] Back-End: Bloco 20 ao 32
+- [ ] Computer-Science: Bloco 33 ao 38
+- [ ] Soft Skills: Competência 01 ao 06
+
+Cada pasta acima contém um arquivo README com detalhes de cada projetos.
+
+* * *
+
+### 🖥 Módulo - Fundamentos do Desenvolvimento Web
+
+#### Projetos
+
+- [x] Bloco 5 - Todo List - [Deploy](https://marlondlacerda.github.io/trybe-projetos/todo-list/) | [Código Fonte](https://github.com/marlondlacerda/trybe-projetos/tree/main/todo-list#readme)
+
+* * *
+
+
 ## Lista dos Projetos
 <div align="left" style="display: inline_block">
   <ul>
     <li>
-        <a href="https://github.com/marlondlacerda/trybe-projetos/tree/main/todo-list#readme">
+        <a href="">
         Todo List Project
         </a>
     </li>
   </ul>
 </div>
-
----
-
-# HABILIDADES
- 
----
