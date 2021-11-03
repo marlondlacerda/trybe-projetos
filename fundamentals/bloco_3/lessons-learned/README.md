@@ -54,5 +54,5 @@
   <a href="https://github.com/marlondlacerda/trybe-projetos">Voltar para o repositório principal</a>
 </div>
 <div align="center">
-  <a href="https://github.com/marlondlacerda/trybe-projetos/edit/main/fundamentals/bloco_3/lessons-learned/README.md">⬆ Voltar para o topo</a>
+  <a href="https://github.com/marlondlacerda/trybe-projetos/blob/main/fundamentals/bloco_3/lessons-learned/README.md">⬆ Voltar para o topo</a>
 </div>
