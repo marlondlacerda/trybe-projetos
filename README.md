@@ -27,5 +27,6 @@ Cada pasta acima contém um arquivo README com detalhes de cada projetos.
 
 #### Projetos
 - [x] Bloco 3 - Lessons Learned - [Deploy](https://marlondlacerda-lessons-learned.vercel.app/) | [Código Fonte](https://github.com/marlondlacerda/trybe-projetos/tree/main/fundamentals/bloco_3/lessons-learned#readme)
+- [x] Bloco 4 - Playground Functions  - [Código Fonte](https://github.com/marlondlacerda/trybe-projetos/tree/main/fundamentals/bloco_4/playground-functions#readme)
 - [x] Bloco 5 - Todo List - [Deploy](https://marlondlacerda-todo-list.vercel.app/) | [Código Fonte](https://github.com/marlondlacerda/trybe-projetos/tree/main/fundamentals/bloco_5/todo-list#readme)
  
