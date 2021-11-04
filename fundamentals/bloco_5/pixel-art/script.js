@@ -1,159 +1,131 @@
-//            AQUI FICA O HEAD DO MAIN TUDO SOBRE A SESSÃO BALDE E AFINS
+const board = document.querySelector('#pixel-board');
+const btnGenerateBoard = document.querySelector('#generate-board');
+const btnClearBoard = document.querySelector('#clear-board');
+const colors = document.querySelectorAll('.color');
+const eraser = document.querySelector('.eraser');
+const newColor = document.querySelector('#new-colors');
 
 // Calculo para criar paleta de cores aleatórias, créditos ao pessoal que me ajudou
-function randomColorGenerator() {
-  // source https://css-tricks.com/snippets/javascript/random-hex-color/
-  const randomColor = Math.floor(Math.random() * 16777215).toString(16);
-  return (`#${randomColor}`);
+const generateRandomColor = () => {
+  // source https://www.codegrepper.com/code-examples/javascript/generate+random+rgb+color+javascript
+  const r = () => Math.random() * 256 >> 0;
+  const color = `rgb(${r()}, ${r()}, ${r()})`;
+  return (color);
 }
 
-// Função com objetivo de criar Listas ordenadas com os Baldes de Tintas para o usuário Selecionar.
-function criadorDePaletas(cPaleta) {
-  const li = document.createElement('li');
-  li.className = 'color';
-  li.style.backgroundColor = 'black';
-  cPaleta.appendChild(li);
+// Gera as cores e chama a função para randomizar elas
+const generateColors = () => {
+  const colorOne = document.querySelector('#colorOne');
+  const colorTwo = document.querySelector('#colorTwo');
+  const colorThree = document.querySelector('#colorThree');
+  const colorFour = document.querySelector('#colorFour');
 
-  for (let index = 1; index < 4; index += 1) {
-    const newLi = document.createElement('li');
-    newLi.className = 'color';
-    newLi.style.backgroundColor = randomColorGenerator();
-    cPaleta.appendChild(newLi);
+  colorOne.style.backgroundColor = 'rgb(0, 0, 0)';
+  colorOne.classList.add('selected');
+  colorTwo.style.backgroundColor = generateRandomColor();
+  colorThree.style.backgroundColor = generateRandomColor();
+  colorFour.style.backgroundColor = generateRandomColor();
+}
+
+const changeColorWhenClicked = ({ target }) => {
+  const findSelectedClass = document.querySelector('.selected');
+  const getColorFromClass = findSelectedClass.getAttribute('style').split(':')[1];
+  const color = getColorFromClass.substring(1, getColorFromClass.length - 1);
+  const div = target;
+  div.style.backgroundColor = color;
+}
+
+const resetStyleBoard = () => {
+  board.innerHTML = '';
+}
+
+const setStyleforBoard = (input)  => {
+  board.style.gridTemplateColumns = `repeat(${input}, 40px)`;
+  board.style.gridTemplateRows = `repeat(${input}, 40px)`;
+}
+
+//Verifica o valor do input e retorna qual será o tamanho dele
+const checkValuesFromInput = ({ value }) => {
+  if (value < 5) value = 5;
+  if (value > 50) value = 50;
+  return value;
+}
+
+// gera o tamanho do quadro com o input recebido
+const generatePixelSize = (input) => {
+  for (let index = 0; index < input * input; index += 1) {
+    const pixel = document.createElement('div');
+    pixel.classList.add('pixel');
+    pixel.addEventListener('click', changeColorWhenClicked);
+    board.appendChild(pixel);
   }
 }
-//                               << ============---============ >>
 
-// Define a cor preta como selecionada ao iniciar o site
-function blackSelected() {
-  const black = document.querySelector('.color');
-  black.classList.add('selected');
-}
-//                               << ============---============ >>
-
-// Função para escolher a cor do balde e pintar os pixels
-function pincel(click) {
-  const colorSelected = document.querySelector('.selected');
-  const clack = click;
-  if (clack.target.classList.contains('color') && clack.target !== colorSelected) {
-    colorSelected.classList.remove('selected');
-    clack.target.classList.add('selected');
-  } else if (clack.target.classList.contains('pixel')) {
-    const corAtual = colorSelected.style.backgroundColor;
-    clack.target.style.backgroundColor = corAtual;
+// Verifica se é a primeira vez que a tela está sendo renderizada ou valor recebido pelo input
+const generatePixels = (isFirstTime = true) => {
+  if (isFirstTime !== true) {
+    const number = checkValuesFromInput(document.querySelector('#board-size'));
+    resetStyleBoard();
+    generatePixelSize(number);
+    setStyleforBoard(number);
+  } else {
+    resetStyleBoard();
+    generatePixelSize(5);
+    setStyleforBoard(5);
   }
 }
-//                               << ============---============ >>
 
-// Cria o botão de Apagar tudo
-function eraseAllButton(balde) {
-  const divEraseButton = document.createElement('div');
-  balde.appendChild(divEraseButton);
-
-  const eraseAll = document.createElement('button');
-  eraseAll.setAttribute('id', 'clear-board');
-  eraseAll.innerHTML = 'Limpar';
-  divEraseButton.appendChild(eraseAll);
-  eraseAll.addEventListener('click', () => {
-    const quadroBranco = document.querySelectorAll('.pixel');
-
-    for (let index = 0; index < quadroBranco.length; index += 1) {
-      quadroBranco[index].style.backgroundColor = 'white';
-    }
-  });
+const setSelectedClass = (colorSelected) => {
+  const palleteColors = colors;
+  eraser.classList.remove('selected');
+  for (let index = 0; index < palleteColors.length; index += 1) {
+    palleteColors[index].classList.remove('selected');
+  }
+  colorSelected.classList.add('selected');
 }
 
-// ============================ // ================================================= //
+const checkInputAndThenGeneratePixels = () => {
+  const checkInput = document.querySelector('#board-size');
 
-//            AQUI FICA O TUDO REFERENTE AO BOARD, CRIAÇÃO DE PIXELS E INPUT
-
-// Função que irá colocar atributos no input criado dinamicamente
-function intputAttrCreate(input) {
-  const inputAttr = input;
-  inputAttr.id = 'board-size';
-  inputAttr.type = 'number';
-  inputAttr.min = 1;
-  return inputAttr;
-}
-//                               << ============---============ >>
-
-// Função que irá fazer os cálculos para criar píxels com o tamanho da largura e altura certa
-function createPixels(number, board) {
-  const quadro = board;
-  const newValue = number * number;
-  const width = (number * 40) + (number * 2); // cálculo para o tamanho do board ficar perfeito
-  quadro.style.width = width;
-
-  for (let index = 0; index < newValue; index += 1) {
-    const divPixel = document.createElement('div');
-    divPixel.className = 'pixel';
-    quadro.appendChild(divPixel);
+  if (checkInput.value === '') {
+    alert('Board inválido!');
+  } else {
+    generatePixels(false);
   }
 }
-//                               << ============---============ >>
 
-// Função que irá criar o quadro
-function criadordeQuadro(number = 5) {
-  const board = document.createElement('div');
-  board.id = 'pixel-board';
-  document.body.appendChild(board);
-
-  createPixels(number, board);
+const clearBoardAndFillPixelsWithWhite = () => {
+  const pixels = document.querySelectorAll('.pixel');
+  for (let index = 0; index < pixels.length; index += 1) {
+    pixels[index].style.backgroundColor = 'rgb(255, 255, 255)';
+  }
 }
-//                               << ============---============ >>
 
-// Função para verificar as condições númeras que o usuário colocou no input
-function verifyNumber(inputButton) {
-  const pixels = 'pixel-board';
-  const boardSize = 'board-size';
-  inputButton.addEventListener('click', () => {
-    let number = parseInt(document.getElementById(boardSize).value, 10);
-    if (!number) {
-      alert('Board inválido!');
-    } else if (number < 5) {
-      number = 5;
-    } else if (number > 50) {
-      number = 50;
-    }
-    document.getElementById(pixels).remove();
-    criadordeQuadro(number);
-    document.getElementById(boardSize).value = '';
-  });
+function setSelectedColorFunctionInPixel() {
+  const pixels = document.querySelectorAll('.pixel');
+  for (let index = 0; index < pixels.length; index += 1) {
+    pixels[index].addEventListener('click', changeColorWhenClicked);
+  }
 }
-//                               << ============---============ >>
-
-// Função para criar o input e o botão, após criado irá para a função de verificação
-function boardSizeCreate(balde) {
-  const divInputButtons = document.createElement('div');
-  balde.appendChild(divInputButtons);
-
-  const h3 = document.createElement('h3');
-  h3.innerText = 'Insira um valor para ajustar o tamanho do quadro!';
-  divInputButtons.appendChild(h3);
-
-  // Cria o Input para escrever os números
-  const input = document.createElement('input');
-  intputAttrCreate(input);
-  divInputButtons.appendChild(input);
-
-  // Cria o botão para o Input
-  const inputButton = document.createElement('button');
-  inputButton.setAttribute('id', 'generate-board');
-  inputButton.innerText = '#VQV';
-  divInputButtons.appendChild(inputButton);
-  verifyNumber(inputButton);
-}
-//                               << ============---============ >>
 
 window.onload = () => {
-  const cPaleta = document.querySelector('#color-palette');
-  const balde = document.querySelector('.balde');
+  generateColors();
+  generatePixels();
 
-  criadorDePaletas(cPaleta);
-  blackSelected();
-  eraseAllButton(balde);
+  btnClearBoard.addEventListener('click', () => {
+    clearBoardAndFillPixelsWithWhite();
+  });
 
-  boardSizeCreate(balde);
-  criadordeQuadro();
+  btnGenerateBoard.addEventListener('click', () => {
+    checkInputAndThenGeneratePixels();
+  });
 
-  document.addEventListener('click', pincel);
+  colors.forEach((color) => {
+    color.addEventListener('click', ({ target }) => setSelectedClass(target));
+  });
+
+  eraser.addEventListener('click', ({ target }) => setSelectedClass(target));
+  newColor.addEventListener('click', generateColors);
+
+  setSelectedColorFunctionInPixel();
 };
