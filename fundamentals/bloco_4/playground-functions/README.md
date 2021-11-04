@@ -352,6 +352,6 @@ String retornada:
 </div>
 <div align="center">
 
-[⬆ Voltar para o topo](#boas)
+[⬆ Voltar para o topo](#boas-vindas-ao-repositório-do-projeto-playground-functions)
 
 </div>
