@@ -1,82 +1,61 @@
-## Termos e acordos
+# Boas vindas ao repositório do projeto Arte com Pixels!
 
-Ao iniciar este projeto, você concorda com as diretrizes do Código de Ética e Conduta e do Manual da Pessoa Estudante da Trybe.
+<div align="center">
+  <img height="150px" align="right" src="https://theme.zdassets.com/theme_assets/9633455/9814df697eaf49815d7df109110815ff887b3457.png" />
+  <div align="left" style="display: inline_block">
+    <h2>Módulo: Fundamentos do Desenvolvimento Web</h2>
+    <span>
+      Este Repositório possuí projeto desenvolvido no período que estive na Trybe, abordando sobre conceitos de estilização, manipulação do DOM com Javascript e reutilização de código.
+    </span>
+  </div>
+  <br>
+</div>
 
----
-
-## Boas vindas ao repositório do projeto Arte com Pixels!
-
-Você já usa o GitHub diariamente para desenvolver os exercícios, certo? Agora, para desenvolver os projetos, você deverá seguir as instruções a seguir. Atenção a cada passo, e se tiver qualquer dúvida, nos envie por _Slack_! #vqv 🚀
-
-Aqui você vai encontrar os detalhes de como estruturar o desenvolvimento do seu projeto à partir desse repositório, utilizando uma branch específica e um _Pull Request_ para colocar seus códigos.
-
----
-
-## Sumário
-
-- [Habilidades](#habilidades)
-- [Entregáveis](#entregáveis)
-  - [O que deverá ser desenvolvido](#o-que-deverá-ser-desenvolvido)
-  - [Desenvolvimento](#desenvolvimento)
-  - [Data de Entrega](#data-de-entrega)
-- [Instruções para entregar seu projeto](#instruções-para-entregar-seu-projeto)
-  - [Antes de começar a desenvolver](#antes-de-começar-a-desenvolver)
-  - [Durante o desenvolvimento](#durante-o-desenvolvimento)
-- [Como desenvolver](#como-desenvolver)
-  - [Linter](#linter)
-  - [Cypress](#cypress)
-- [Requisitos do projeto](#requisitos-do-projeto)
-
-    `Requisitos obrigatórios:`
-    - [1 - Adicione à página o título "Paleta de Cores".](#1---adicione-à-página-o-título-paleta-de-cores)
-    - [2 - Adicione à página uma paleta de quatro cores distintas.](#2---adicione-à-página-uma-paleta-de-quatro-cores-distintas)
-    - [3 - Adicione na página a cor preta ela deve ser a primeira na paleta de cores.](#3---adicione-na-página-a-cor-preta-ela-deve-ser-a-primeira-na-paleta-de-cores)
-    - [4 - Adicione à página um quadro de pixels, com 25 pixels.](#4---adicione-à-página-um-quadro-de-pixels-com-25-pixels)
-    - [5 - Faça com que cada elemento do quadro de pixels possua 40 pixels de largura, 40 pixels de altura e seja delimitado por uma borda preta de 1 pixel.](#5---aplique-a-cada-elemento-do-quadro-de-pixels-deve-possuir-40-pixels-de-largura-e-40-pixels-de-altura-e-ser-delimitado-por-uma-borda-preta-de-1-pixel)
-    - [6 - Definia a cor preta como cor inicial. Ao carregar a página a cor preta já deve estar selecionada para pintar os pixels](#6---executar-o-carregamento-da-página-a-cor-preta-da-paleta-já-deve-estar-selecionada-para-pintar-os-pixels)
-    - [7 - Selecione uma das cores da paleta, ao clicar, a cor selecionada é a que será utilizada para preencher os pixels no quadro.](#7---clicar-em-uma-das-cores-da-paleta-a-cor-selecionada-é-que-vai-ser-usada-para-preencher-os-pixels-no-quadro)
-    - [8 - Clicar em um pixel dentro do quadro após selecionar uma cor na paleta, faz com que o pixel seja preenchido com a cor selecionada.](#8---clicar-em-um-pixel-dentro-do-quadro-após-selecionar-uma-cor-na-paleta-o-pixel-deve-ser-preenchido-com-esta-cor)
-    - [9 - Crie um botão que, ao ser clicado, limpa o quadro preenchendo a cor de todos seus pixels com branco.](#9---crie-um-botão-que-ao-ser-clicado-limpa-o-quadro-preenchendo-a-cor-de-todos-seus-pixels-com-branco)
-
-    `Requisitos bônus:`
-    - [10 - Faça o quadro de pixels ter seu tamanho definido pelo usuário.](#10---faça-o-quadro-de-pixels-ter-seu-tamanho-definido-pelo-usuário)
-    - [11 - Limite o tamanho do mínimo e máximo do board.](#11---limite-o-tamanho-do-mínimo-e-máximo-do-board)
-    - [12 - Faça com que as cores da paleta sejam geradas aleatoriamente ao carregar a página.](#12---faça-com-que-as-cores-da-paleta-sejam-geradas-aleatoriamente-ao-carregar-a-página)
-- [Depois de terminar o desenvolvimento](#depois-de-terminar-o-desenvolvimento)
-- [Revisando um pull request](#revisando-um-pull-request)
-- [Compartilhe no LinkedIn](#compartilhe-no-linkedin)
-- [Avisos Finais](#avisos-finais)
+## Preview
+<div align="left" style="display: inline_block">
+  <a href="https://marlondlacerda-todo-list.vercel.app/">Clique aqui</a> para ter acesso a um preview do App.
+</div>
 
 ---
 
-## Habilidades
+<div align="center">
+  <img src="./pixelart.png">
+</div>
 
+## HABILIDADES
 - Manipular o DOM
+- Manipular Javascript
 
-- Manipular o Javascript
+## O que foi desenvolvido
+- Implementar uma página web que contém uma paleta de cores funcional que poderá ser utilizada para criar desenhos em pixels. Para isto você irá utilizar <code>HTML</code>, <code>CSS</code> e <code>JavaScript</code>.
+---
+<details>
+    <summary>Requisitos do projeto</summary>
+
+- [x] 1 - Adicione à página o título "Paleta de Cores".
+  - O título deverá ficar dentro de uma tag `h1` com o `id` denominado `title`;
+
+**O que será verificado:**
+
+- Verifica se contém um elemento `h1` com o id `title` com o título correto
+
+- [x] 2 - Adicione à página uma paleta de quatro cores distintas.
+- [x] 3 - Adicione na página a cor preta ela deve ser a primeira na paleta de cores.
+- [x] 4 - Adicione à página um quadro de pixels, com 25 pixels.
+- [x] 5 - Faça com que cada elemento do quadro de pixels possua 40 pixels de largura, 40 pixels de altura e seja delimitado por uma borda preta de 1 pixel.
+- [x] 6 - Definia a cor preta como cor inicial. Ao carregar a página a cor preta já deve estar selecionada para pintar os pixels.
+- [x] 7 - Selecione uma das cores da paleta, ao clicar, a cor selecionada é a que será utilizada para preencher os pixels no quadro.
+- [x] 8 - Clicar em um pixel dentro do quadro após selecionar uma cor na paleta, faz com que o pixel seja preenchido com a cor selecionada.
+- [x] 9 - Crie um botão que, ao ser clicado, limpa o quadro preenchendo a cor de todos seus pixels com branco.
+- [x] 10 - Faça o quadro de pixels ter seu tamanho definido pelo usuário.
+- [x] 11 - Limite o tamanho do mínimo e máximo do board.
+- [x] 12 - Faça com que as cores da paleta sejam geradas aleatoriamente ao carregar a página.
+- [x] 13
+- [x] 14
+- [x] 15
+</details>
 
 ---
-
-## O que deverá ser desenvolvido
-
-- Você irá implementar uma página web que contém uma paleta de cores funcional que poderá ser utilizada para criar desenhos em pixels. Para isto você irá utilizar `javascript`, `css` e `html`.
-
----
-
-## Desenvolvimento
-
-- Implemente uma paleta de cores usando `javascript`, `css` e `html`.
-
----
-
-## Data de Entrega
-
-- Será `1` dia de projeto.
-
-- Data de entrega para avaliação final do projeto: `14/06/2021 - 14:00h`.
-
----
-
 ## Instruções para entregar seu projeto:
 
 ### 🗒 ANTES DE COMEÇAR A DESENVOLVER:
@@ -280,13 +259,7 @@ Neste projeto, você implementará um editor de arte com pixels.
 
 ### 1 - Adicione à página o título "Paleta de Cores".
 
-- O título deverá ficar dentro de uma tag `h1` com o `id` denominado `title`;
 
-- O texto do título deve ser **exatamente** "Paleta de Cores".
-
-**O que será verificado:**
-
-- Verifica se contém um elemento `h1` com o id `title` com o título correto
 
 ### 2 - Adicione à página uma paleta de quatro cores distintas.
 
