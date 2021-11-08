@@ -1,8 +1,6 @@
-const borderDefault = document.querySelector('#default');
+const borderStyles = document.querySelector('.buttons-container').childNodes;
 const btnDownload = document.querySelector('.download');
 const container = document.querySelector('#meme-image-container');
-const earth = document.querySelector('#earth');
-const fire = document.querySelector('#fire');
 const inputImg = document.querySelector('#meme-insert');
 const inputText = document.querySelector('#text-input');
 const localText = document.querySelectorAll('input[name="localText"]');
@@ -10,7 +8,6 @@ const memeImage = document.querySelector('#meme-image');
 const memeText = document.querySelector('#meme-text');
 const preMemes = document.querySelector('#meme-templates').childNodes;
 const save = document.querySelector('.save');
-const water = document.querySelector('#water');
 
 inputText.addEventListener('input', () => {
   memeText.innerHTML = inputText.value;
@@ -21,21 +18,11 @@ inputImg.addEventListener('input', ({ target }) => {
   memeImage.src = URL.createObjectURL(target.files[0]);
 });
 
-fire.addEventListener('click', () => {
-  container.style.border = '3px dashed red';
-});
-
-water.addEventListener('click', () => {
-  container.style.border = '5px double blue';
-});
-
-earth.addEventListener('click', () => {
-  container.style.border = '6px groove green';
-});
-
-borderDefault.addEventListener('click', () => {
-  container.style.border = '1px solid black';
-});
+borderStyles.forEach((element) => {
+  element.addEventListener('click', ({target: {value}}) => {
+    container.style.border = value;
+  })
+})
 
 preMemes.forEach((element) => {
   element.addEventListener('click', () => {
