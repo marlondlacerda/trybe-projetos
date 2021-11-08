@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>MEME GENERATOR</title>
+</head>
+<body>
+  <section class="container">
+
+    <section class="head-title">
+      <h1>😎 MEME GENERATOR 😂</h1>
+    </section>
+
+    <section class="input">
+      <div>
+        <label for="text-input">Texto:</label>
+        <input
+        type="text"
+        placeholder="Frase para o Meme"
+        id="text-input"
+        name="text-input"
+        maxlength="60"
+        />
+      </div>
+      <div>
+        <!-- source https://www.webtrickshome.com/forum/how-to-display-uploaded-image-in-html-using-javascript -->
+        <label for="meme-insert">
+          Foto:
+        </label>
+        <input type="file"  accept="image/gif, image/jpeg, image/png" name="image"
+        id="meme-insert" />
+      </div>
+
+      </section>
+
+      <section class="text-local-container">
+        <h3>Local do Texto</h3>
+        <div class="text-local-inputs">
+            <input type="radio" id="start" name="localText" value="0%" checked />
+            <label for="start">Começo</label>
+
+            <input type="radio" id="center" name="localText" value="50%"/>
+            <label for="center">Meio</label>
+
+            <input type="radio" id="end" name="localText" value="85%"/>
+            <label for="end">Fim</label>
+        </div>
+      </section>
+
+    <section id="meme-backgrounds">
+      <h3>Estilos Customizados</h3>
+      <div class="buttons-container">
+        <button type="button" id="fire">FIRE</button>
+        <button type="button" id="water">WATER</button>
+        <button type="button" id="earth">EARTH</button>
+        <button type="button" id="default">PADRÃO</button>
+      </div>
+    </section>
+
+    <section id="meme-image-container">
+        <img id="meme-image">
+        <p id="meme-text"></p>
+    </section>
+
+    <section class="convert-to-img">
+      <button type="button" class="save">
+        <span class="circle" aria-hidden="true">
+          <span class="icon arrow"></span>
+        </span>
+        <span class="button-text">SALVAR MEME</span>
+      </button>
+      <a class="download"></a>
+    </section>
+
+    <section class="pre-memes">
+      <h1>Backgrounds</h1>
+    <div id="meme-templates">
+      <img id="meme-1" src="./imgs/meme1.png">
+      <img id="meme-2" src="./imgs/meme2.png">
+      <img id="meme-3" src="./imgs/meme3.png">
+      <img id="meme-4" src="./imgs/meme4.png">
+    </div>
+    </section>
+  </section>
+  <script src="./scripts/html2canvas.min.js"></script>
+  <script src="./script.js"></script>
+</body>
+</html>
