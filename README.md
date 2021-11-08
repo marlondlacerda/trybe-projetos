@@ -30,4 +30,6 @@ Cada pasta acima contém um arquivo README com detalhes de cada projetos.
 - [x] Bloco 4 - Playground Functions  - [Código Fonte](https://github.com/marlondlacerda/trybe-projetos/tree/main/fundamentals/bloco_4/playground-functions#readme)
 - [x] Bloco 5 - Pixel Art - [Deploy](https://marlondlacerda-pixel-art.vercel.app/) | [Código Fonte](https://github.com/marlondlacerda/trybe-projetos/tree/main/fundamentals/bloco_5/pixel-art#readme)
 - [x] Bloco 5 - Todo List - [Deploy](https://marlondlacerda-todo-list.vercel.app/) | [Código Fonte](https://github.com/marlondlacerda/trybe-projetos/tree/main/fundamentals/bloco_5/todo-list#readme)
+- [x] Bloco 5 - EXTRAS - Meme Generator - [Deploy](https://marlondlacerda-meme-generator.vercel.app/) | [Código Fonte](https://github.com/marlondlacerda/trybe-projetos/tree/main/fundamentals/bloco_5/extras/meme-generator#readme)
+
  
