@@ -120,7 +120,7 @@
 - [x] 12 - Faça com que as cores da paleta sejam geradas aleatoriamente ao carregar a página.
   - A cor preta ainda precisa estar presente e deve ser a primeira na sua paleta de cores.
 
-### RECURSOS EXTRAS DESENVOLVIDOS POR MIM
+### RECURSOS ADICIONAIS DESENVOLVIDOS POR MIM
 - [x] 13 - Adicione na paleta a cor branca, ela deve ser a última na paleta de cores.
   - A cor de fundo deve ser branco e estar posicionado no final da paleta de cores;
   - O elemento deve possuir a <code>classe</code> denominada <code>eraser</code>

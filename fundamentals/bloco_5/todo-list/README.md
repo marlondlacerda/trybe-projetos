@@ -52,7 +52,7 @@
 </details>
 
 ---
-## Librarys
+## LIBRARYS
 
   <h3><a href="https://codeseven.github.io/toastr/">Toastr</a></h3>
   <span>Toastr é uma biblioteca Javascript para notificações sem bloqueio do tipo Gnome / Growl. jQuery é necessário. O objetivo é criar uma biblioteca central simples que possa ser customizada e ampliada.</span>
