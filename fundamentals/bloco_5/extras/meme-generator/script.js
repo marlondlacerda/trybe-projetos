@@ -19,7 +19,11 @@ inputImg.addEventListener('input', ({ target }) => {
 });
 
 borderStyles.forEach((element) => {
+<<<<<<< HEAD:fundamentals/bloco_5/extras/meme-generator/script.js
   element.addEventListener('click', ({target: {value}}) => {
+=======
+  element.addEventListener('click', ({target: { value }}) => {
+>>>>>>> 8a2fd118433ad6c8ebb1e324fcb58f9790bc6ccc:meme-generator/script.js
     container.style.border = value;
   })
 })

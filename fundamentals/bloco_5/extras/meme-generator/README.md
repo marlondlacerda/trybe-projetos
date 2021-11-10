@@ -19,7 +19,7 @@
 ---
 
 <div align="center">
-  <img src="./images/pixelart.png">
+  <img src="./images/preview.png">
 </div>
 
 ## HABILIDADES
