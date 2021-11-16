@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mistery Letter</title>
+  <link rel="icon" type="image/x-icon" href="./images/favicon.png" />
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <section class="container">
+    <div class="card card--inverted">
+      <h2> <svg class="icon" aria-hidden="true">
+        <use xlink:href="#icon-coffee" href="#icon-coffee" />
+      </svg>Carta Misteriosa</h2>
+      <label for="carta-texto"  class="input">
+        <input type="text" name="carta" placeholder="Texto da carta" id="carta-texto" class="input__field">
+        <span class="input__label">
+          Digite aqui o texto:
+        </span>
+      </label>
+      <div class="button-group">
+        <button id="criar-carta">Gerar Carta</button>
+        <p id="carta-contador">0</p>
+      </div>
+    </div>
+
+      <svg xmlns="http://www.w3.org/2000/svg" class="hidden">
+        <symbol id="icon-coffee" viewBox="0 0 20 20">
+          <title>icon-coffee</title>
+          <path fill="currentColor" d="M15,17H14V9h3a3,3,0,0,1,3,3h0A5,5,0,0,1,15,17Zm1-6v3.83A3,3,0,0,0,18,12a1,1,0,0,0-1-1Z"/>
+          <rect fill="currentColor" x="1" y="7" width="15" height="12" rx="3" ry="3"/>
+          <path fill="var(--color-accent)" d="M7.07,5.42a5.45,5.45,0,0,1,0-4.85,1,1,0,0,1,1.79.89,3.44,3.44,0,0,0,0,3.06,1,1,0,0,1-1.79.89Z"/>
+          <path fill="var(--color-accent)" d="M3.07,5.42a5.45,5.45,0,0,1,0-4.85,1,1,0,0,1,1.79.89,3.44,3.44,0,0,0,0,3.06,1,1,0,1,1-1.79.89Z"/>
+          <path fill="var(--color-accent)" d="M11.07,5.42a5.45,5.45,0,0,1,0-4.85,1,1,0,0,1,1.79.89,3.44,3.44,0,0,0,0,3.06,1,1,0,1,1-1.79.89Z"/>
+        </symbol>
+      </svg>
+
+    <section id="carta"  class="card card--inverted">
+      <p id="carta-gerada">Placeholder</p>
+    </section>
+
+    <script src="script.js"></script>
+  </section>
+  </body>
+  </html>
+  
