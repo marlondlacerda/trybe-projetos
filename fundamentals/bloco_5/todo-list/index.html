@@ -26,9 +26,27 @@
         Clicar duas vezes irá marcá-la como tarefa completada!
       </em>
     </h3>
-    <section class="inputButtons"></section>
-    <section class="inputs"></section>
-      <section class="lists"></section>
+    <section class="inputButtons">
+      <input type="text" id="task-text" placeholder="Digite aqui sua tarefa" />
+      <button id="create-task-button" title="Clique aqui para adicionar a tarefa na lista!">Criar tarefa</button>
+    </section>
+    <section class="inputs">
+      <div id="buttonsList">
+        <button id="remove-selected" title="Remover tarefa selecionada">X</button>
+        <button id="move-up" title="Mover para cima">⬆</button>
+        <button id="move-down" title="Mover para baixo">⬇</button>
+        <button id="remove-dones" title="Remove apenas as tarefas concluídas">
+          Remover tarefas concluídas
+        </button>
+        <button id="remove-all" title="Remover todas as tarefas listadas">Limpar lista</button>
+        <button id="save" title="Salva sua lista no navegador">Salvar</button>
+
+      </div>
+    </section>
+
+      <section class="lists">
+        <ol id="task-list"></ol>
+      </section>
     </main>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
