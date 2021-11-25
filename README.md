@@ -33,3 +33,4 @@ Cada pasta acima contém um arquivo README com detalhes de cada projetos.
 - [x] Bloco 5 - EXTRAS - Color Guess - [Deploy](https://marlondlacerda-color-guess.vercel.app/) | [Código Fonte](https://github.com/marlondlacerda/trybe-projetos/tree/main/fundamentals/bloco_5/extras/color-guess#readme)
 - [x] Bloco 5 - EXTRAS - Meme Generator - [Deploy](https://marlondlacerda-meme-generator.vercel.app/) | [Código Fonte](https://github.com/marlondlacerda/trybe-projetos/tree/main/fundamentals/bloco_5/extras/meme-generator#readme)
 - [x] Bloco 5 - EXTRAS - Mistery Letter - [Deploy](https://marlondlacerda-mistery-letter.vercel.app/) | [Código Fonte](https://github.com/marlondlacerda/trybe-projetos/tree/main/fundamentals/bloco_5/extras/mistery-letter#readme)
+- [x] Bloco 6 - Trybewarts - [Deploy](https://marlondlacerda-trybewarts.vercel.app/) | [Código Fonte](https://github.com/marlondlacerda/trybewarts#readme)
