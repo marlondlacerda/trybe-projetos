@@ -35,3 +35,4 @@ Cada pasta acima contém um arquivo README com detalhes de cada projetos.
 - [x] Bloco 5 - EXTRAS - Mistery Letter - [Deploy](https://marlondlacerda-mistery-letter.vercel.app/) | [Código Fonte](https://github.com/marlondlacerda/trybe-projetos/tree/main/fundamentals/bloco_5/extras/mistery-letter#readme)
 - [x] Bloco 6 - Trybewarts - [Deploy](https://marlondlacerda-trybewarts.vercel.app/) | [Código Fonte](https://github.com/marlondlacerda/trybewarts#readme)
 - [x] Bloco 7 - ES6 e Testes Unitários - [Código Fonte](https://github.com/marlondlacerda/trybe-projetos/tree/main/fundamentals/bloco_7/js-unit-tests#readme)
+- [x] Bloco 8 - ES6 e Higher Order Functions - [Código Fonte](https://github.com/marlondlacerda/trybe-projetos/tree/main/fundamentals/bloco_8/zoo-functions#readme)
