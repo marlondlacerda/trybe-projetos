@@ -13,8 +13,8 @@ Este repositório foi desenvolvido com intuito de de conter todas as atividades 
 
 ## 🟥 Checklist
 
-- [x] Fundamentals: Bloco 1 ao 10 
-- [ ] Front-End: Bloco 11 ao 19
+- [x] Fundamentals: Bloco 1 ao 9 
+- [ ] Front-End: Bloco 10 ao 19
 - [ ] Back-End: Bloco 20 ao 32
 - [ ] Computer-Science: Bloco 33 ao 38
 - [ ] Soft Skills: Competência 01 ao 06
@@ -36,3 +36,4 @@ Cada pasta acima contém um arquivo README com detalhes de cada projetos.
 - [x] Bloco 6 - Trybewarts - [Deploy](https://marlondlacerda-trybewarts.vercel.app/) | [Código Fonte](https://github.com/marlondlacerda/trybewarts#readme)
 - [x] Bloco 7 - ES6 e Testes Unitários - [Código Fonte](https://github.com/marlondlacerda/trybe-projetos/tree/main/fundamentals/bloco_7/js-unit-tests#readme)
 - [x] Bloco 8 - ES6 e Higher Order Functions - [Código Fonte](https://github.com/marlondlacerda/trybe-projetos/tree/main/fundamentals/bloco_8/zoo-functions#readme)
+- [x] Bloco 9 - Shoppingcart - [Deploy](https://marlondlacerda-shoppingcart.vercel.app/) | [Código Fonte](https://github.com/marlondlacerda/shoppingcart#readme)
