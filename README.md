@@ -40,7 +40,7 @@ Cada pasta acima contém um arquivo README com detalhes de cada projetos.
 
 ---
 
-### 🖥 Módulo - Fundamentos do Desenvolvimento Web
+### 🧩 Módulo - Desenvolvimento Front-End
 
 #### Projetos
 
