@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Boas vindas ao repositório do Projeto ES6 e Testes Unitários!
 
 <div align="center">
@@ -191,41 +190,3 @@ A estrutura deste código e deste objeto já foi definida e você irá implement
 [⬆ Voltar para o topo](#boas-vindas-ao-repositório-do-projeto-es6-e-testes-unitários)
 
 </div>
-=======
-
-<div align=center>
-
-# 🟢 Trybe Studies 🟢
-
-Este repositório foi desenvolvido com intuito de de conter todas as atividades e projetos desenvolvidos no período que estive na <b>Trybe</b>.
-
-<a href="https://www.betrybe.com/" target="_blank">
-<img src="https://freecourse.betrybe.com/images/trybe-logo-e10dbaaa26462aa149b81a924b00df07.png?vsn=d" width="250px">
-</a>
-
-</div>
-
-## 🟥 Checklist
-
-- [x] Fundamentals: Bloco 1 ao 10 
-- [ ] Front-End: Bloco 11 ao 19
-- [ ] Back-End: Bloco 20 ao 32
-- [ ] Computer-Science: Bloco 33 ao 38
-- [ ] Soft Skills: Competência 01 ao 06
-
-Cada pasta acima contém um arquivo README com detalhes de cada projetos.
-
-* * *
-
-### 🖥 Módulo - Fundamentos do Desenvolvimento Web
-
-#### Projetos
-- [x] Bloco 3 - Lessons Learned  - [Deploy](https://marlondlacerda-lessons-learned.vercel.app/) | [Código Fonte](https://github.com/marlondlacerda/trybe-projetos/tree/main/fundamentals/bloco_3/lessons-learned#readme)
-- [x] Bloco 4 - Playground Functions  - [Código Fonte](https://github.com/marlondlacerda/trybe-projetos/tree/main/fundamentals/bloco_4/playground-functions#readme)
-- [x] Bloco 5 - Pixel Art - [Deploy](https://marlondlacerda-pixel-art.vercel.app/) | [Código Fonte](https://github.com/marlondlacerda/trybe-projetos/tree/main/fundamentals/bloco_5/pixel-art#readme)
-- [x] Bloco 5 - Todo List - [Deploy](https://marlondlacerda-todo-list.vercel.app/) | [Código Fonte](https://github.com/marlondlacerda/trybe-projetos/tree/main/fundamentals/bloco_5/todo-list#readme)
-- [x] Bloco 5 - EXTRAS - Color Guess - [Deploy](https://marlondlacerda-color-guess.vercel.app/) | [Código Fonte](https://github.com/marlondlacerda/trybe-projetos/tree/main/fundamentals/bloco_5/extras/color-guess#readme)
-- [x] Bloco 5 - EXTRAS - Meme Generator - [Deploy](https://marlondlacerda-meme-generator.vercel.app/) | [Código Fonte](https://github.com/marlondlacerda/trybe-projetos/tree/main/fundamentals/bloco_5/extras/meme-generator#readme)
-- [x] Bloco 5 - EXTRAS - Mistery Letter - [Deploy](https://marlondlacerda-mistery-letter.vercel.app/) | [Código Fonte](https://github.com/marlondlacerda/trybe-projetos/tree/main/fundamentals/bloco_5/extras/mistery-letter#readme)
-- [x] Bloco 6 - Trybewarts - [Deploy](https://marlondlacerda-trybewarts.vercel.app/) | [Código Fonte](https://github.com/marlondlacerda/trybewarts#readme)
->>>>>>> 66cd31774a9183101bb4a2ee0387e99b3b5ae2bf
