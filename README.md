@@ -44,6 +44,6 @@ Cada pasta acima contém um arquivo README com detalhes de cada projetos.
 
 #### Projetos
 
-- [x] Bloco 11 - Introdução à React
+- [x] Bloco 11 - [Deploy](https://movie-card-library.herokuapp.com/) | [Código Fonte](https://github.com/marlondlacerda/moviecardlibrary#readme)
 
 ---
