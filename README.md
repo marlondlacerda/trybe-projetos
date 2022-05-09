@@ -45,6 +45,6 @@ Cada pasta acima contém um arquivo README com detalhes de cada projetos.
 #### Projetos
 
 - [x] Bloco 11 - Movie Cards Library - [Deploy](https://movie-card-library.herokuapp.com/) | [Código Fonte](https://github.com/marlondlacerda/moviecardlibrary#readme)
-- [ ] Bloco 12 -
+- [x] Bloco 12 - Movie Cards Library Stateful - [Deploy](https://moviecardlibrary-stateful.herokuapp.com/) | [Código Fonte](https://github.com/marlondlacerda/moviecardlibrary-stateful#readme)
 
 ---
