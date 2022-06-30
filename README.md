@@ -51,4 +51,6 @@ Cada pasta acima contém um arquivo README com detalhes de cada projetos.
 ---
 
 ### ⚙️ Módulo - Desenvolvimento Back-End
+
 - [x] Bloco 19 - Docker Todo List - [Código Fonte](https://github.com/marlondlacerda/project-docker-todo-list)
+- [x] Bloco 20 - All For One - [Código Fonte](https://github.com/marlondlacerda/mysql-all-for-one)
