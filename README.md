@@ -55,3 +55,4 @@ Cada pasta acima contém um arquivo README com detalhes de cada projetos.
 - [x] Bloco 19 - Docker Todo List - [Código Fonte](https://github.com/marlondlacerda/project-docker-todo-list)
 - [x] Bloco 20 - All For One - [Código Fonte](https://github.com/marlondlacerda/mysql-all-for-one)
 - [x] Bloco 21 - One For All - [Código Fonte](https://github.com/marlondlacerda/mysql-one-for-all)
+- [x] Bloco 22 - Talker Manager - [Código Fonte](https://github.com/marlondlacerda/talker-manager)
